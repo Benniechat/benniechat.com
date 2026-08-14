@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70">
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a192f" />
+      <stop offset="100%" stop-color="#112240" />
+    </linearGradient>
+  </defs>
+  <!-- Icon Badge -->
+  <rect x="5" y="10" width="50" height="50" rx="12" fill="url(#accent-grad)" />
+  <path d="M22 22 H35 C39 22 41 24 41 27 C41 29 39 31 36 31.5 C40 32.5 42 34.5 42 38.5 C42 42.5 39 44.5 34 44.5 H22 V22 Z M27 26.5 V30 H33 C35 30 36 29.3 36 28.25 C36 27.2 35 26.5 33 26.5 H27 Z M27 34.5 V39.5 H34 C36 39.5 37 38.7 37 37 C37 35.3 36 34.5 34 34.5 H27 Z" fill="#0d9488" />
+  <circle cx="43" cy="18" r="5" fill="#14b8a6"/>
+  <!-- Brand Text -->
+  <text x="68" y="38" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#0a192f">Bennie<tspan fill="#0d9488">Chat</tspan></text>
+  <text x="69" y="52" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.5" fill="#64748b">TECHWEALTH SOLUTIONS</text>
+</svg>
