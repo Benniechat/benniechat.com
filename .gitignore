@@ -1,0 +1,5 @@
+# Backup and temporary files
+*.backup.html
+*.tmp
+Thumbs.db
+.DS_Store

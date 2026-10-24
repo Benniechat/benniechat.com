@@ -4,94 +4,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BennieChat TechWealth Solutions | Technology That Improves Business</title>
-    
+    <meta name="description" content="A Nigerian technology and software development business providing websites, custom web applications, digital platforms, workflow automation, and proprietary product innovation. CAC Reg. 9373701.">
+    <meta name="keywords" content="BennieChat, TechWealth Solutions, Web Development Nigeria, Software Engineering Delta State, Ughelli North, Workflow Automation, SaaS Development, AI Solutions, Wada Oluwapelumi Benedict">
+    <meta name="theme-color" content="#050811">
+
+    <!-- Open Graph Social Metadata -->
+    <meta property="og:title" content="BennieChat TechWealth Solutions | Technology That Improves Business">
+    <meta property="og:description" content="Nigerian technology and software development company providing corporate websites, web applications, automation, and digital platforms.">
+    <meta property="og:image" content="assets/benniechat-logo.png">
+    <meta property="og:type" content="website">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Modular Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Design System Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <!-- Animated Background Blobs -->
-    <div class="bg-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+    <!-- ==========================================================================
+       Top Trust Announcement Bar
+       ========================================================================== -->
+    <div class="top-trust-bar">
+        <div class="container top-trust-content">
+            <div class="trust-badges">
+                <span class="trust-badge-item">
+                    <span class="dot"></span>
+                    <strong>CAC Business Name Reg. No. 9373701</strong>
+                </span>
+                <span class="trust-badge-item">
+                    📍 Ughelli North, Delta State, Nigeria · Remote-First Delivery
+                </span>
+                <span class="trust-badge-item">
+                    📅 Established 2021 · Formal CAC Reg. February 2026
+                </span>
+            </div>
+            <div>
+                <button class="trust-badge-btn open-cac-modal" id="topCacBtn">🛡️ View CAC Certificate</button>
+            </div>
+        </div>
     </div>
 
-    <!-- Header -->
+    <!-- ==========================================================================
+       Main Navigation Header
+       ========================================================================== -->
     <header>
         <div class="container">
             <nav>
-                <a href="#hero" class="logo">
-                    <img src="assets/BennieChatLogo.jpeg" alt="BennieChat Logo">
-                </a>
-                <button class="menu-toggle" id="menuToggle">☰</button>
+                <div class="brand-wrapper">
+                    <a href="#hero" class="brand-logo" id="headerLogoLink">
+                        <img src="assets/benniechat-logo.png" alt="BennieChat TechWealth Solutions Logo" class="brand-logo-img">
+                        <div class="brand-text">
+                            <span class="brand-name">BennieChat <span>TechWealth</span></span>
+                            <span class="brand-tagline">Technology That Improves Business</span>
+                        </div>
+                    </a>
+                </div>
+
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#promise">Why Us</a></li>
-                    <li><a href="#method">Our Method</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#economics">Economics Engine</a></li>
+                    <li><a href="#capabilities">Capabilities</a></li>
+                    <li><a href="#methodology">Delivery Pipeline</a></li>
+                    <li><a href="#innovation">Venture Lab</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#industries">Industries</a></li>
-                    <li><a href="#cta" class="nav-btn">Get Started</a></li>
+                    <li><a href="#procurement">Trust & CAC</a></li>
                 </ul>
+
+                <div class="nav-actions">
+                    <a href="#scope-estimator" class="btn btn-secondary btn-sm" id="navEstimatorBtn">Scope Project</a>
+                    <a href="https://wa.me/2348101811993" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" id="navWhatsAppBtn">
+                        WhatsApp Consultation
+                    </a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="wm-light">
-        <div class="watermark"><img src="assets/BennieChatLogo.jpeg" alt="BennieChat Watermark"></div>
+    <!-- ==========================================================================
+       Hero Section & Interactive Visual Engine
+       ========================================================================== -->
+    <section id="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+
         <div class="container">
             <div class="hero-grid">
-                <div class="hero-text reveal">
-                    <h1>Technology That <span class="highlight">Improves Business.</span></h1>
-                    <p>We don't just build digital solutions. We build technology that makes businesses work better, sell better, operate smarter, and create more value.</p>
-                    <div class="hero-buttons">
-                        <a href="#cta" class="btn btn-primary">Talk to a Consultant</a>
-                        <a href="#services" class="btn btn-secondary">Start a Project</a>
+                <div class="hero-content">
+                    <div class="section-badge">
+                        <span>⚡</span> Corporate Profile & Capability Statement · 2026 Edition
                     </div>
-                    <p class="hero-subtext">
-                        Helping businesses, institutions, entrepreneurs, and organizations leverage technology to improve efficiency, reach more customers, automate operations, and build sustainable digital value.
+                    <h1>
+                        Technology That <span class="gradient-text">Improves Business.</span>
+                    </h1>
+                    <p class="hero-lead">
+                        A Nigerian technology and software development business helping companies, entrepreneurs, and institutions build stronger digital operations — through websites, software, digital platforms, automation, and practical innovation.
                     </p>
-                </div>
-                
-                <div class="hero-visual reveal">
-                    <div class="floating-card float-1">
-                        <div class="check-icon">↓</div>
-                        Costs -30%
+
+                    <div class="hero-pills">
+                        <span class="hero-pill-item">🏛️ <b>CAC Reg:</b> 9373701</span>
+                        <span class="hero-pill-item">⏱️ <b>Operating History:</b> Since 2021</span>
+                        <span class="hero-pill-item">🌐 <b>Model:</b> Remote-First Delivery</span>
+                        <span class="hero-pill-item">💼 <b>Founder:</b> Wada Oluwapelumi Benedict</span>
                     </div>
-                    <div class="floating-card float-2">
-                        <div class="check-icon">↑</div>
-                        Revenue +45%
+
+                    <div class="hero-actions">
+                        <a href="#scope-estimator" class="btn btn-primary" id="heroScopeBtn">
+                            🚀 Scope Your Project (RFP)
+                        </a>
+                        <a href="#economics" class="btn btn-secondary" id="heroSimBtn">
+                            📊 Business Economics Simulator
+                        </a>
+                        <button class="btn btn-secondary open-cac-modal" id="heroCacBtn">
+                            🛡️ CAC Verification
+                        </button>
                     </div>
-                    <div class="dashboard-card">
-                        <div class="dash-header">
-                            <span class="dash-title">Business Performance</span>
-                            <div class="dash-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+
+                    <div class="hero-trust-proof">
+                        <div class="proof-cac">
+                            <div class="cac-seal">✓</div>
+                            <div class="proof-cac-text">
+                                <strong>Registered Nigerian Enterprise</strong>
+                                Companies and Allied Matters Act 2020 · Abuja, Nigeria
+                            </div>
                         </div>
-                        <div class="chart-container">
-                            <svg viewBox="0 0 400 200" width="100%" height="100%">
+                    </div>
+                </div>
+
+                <!-- Hero Interactive Cockpit Infographic -->
+                <div class="hero-cockpit">
+                    <div class="floating-badge badge-top-right">
+                        <span>📉</span> Overhead Costs: <b style="color:var(--cyan-glow);">-35%</b>
+                    </div>
+                    <div class="floating-badge badge-bottom-left">
+                        <span>⚡</span> Process Velocity: <b style="color:#C4B5FD;">+4.8x Faster</b>
+                    </div>
+
+                    <div class="cockpit-card">
+                        <div class="cockpit-header">
+                            <div class="cockpit-title-group">
+                                <span class="status-dot"></span>
+                                <span class="cockpit-title">Business Optimization Cockpit</span>
+                            </div>
+                            <span class="cockpit-tag">Live Logic Stream</span>
+                        </div>
+
+                        <!-- Animated SVG Architecture Infographic -->
+                        <div class="cockpit-flow-diagram">
+                            <svg class="flow-svg" viewBox="0 0 460 140" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
-                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" style="stop-color:var(--accent-teal);stop-opacity:0.4" />
-                                        <stop offset="100%" style="stop-color:var(--accent-teal);stop-opacity:0" />
+                                    <linearGradient id="gradFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#00F2FE" />
+                                        <stop offset="50%" stop-color="#3B82F6" />
+                                        <stop offset="100%" stop-color="#8B5CF6" />
                                     </linearGradient>
+                                    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="4" result="blur" />
+                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                    </filter>
                                 </defs>
-                                <path class="chart-area" d="M0,150 C50,120 100,100 150,80 C200,60 250,40 300,20 L400,0 L400,200 L0,200 Z" />
-                                <path class="chart-line" d="M0,150 C50,120 100,100 150,80 C200,60 250,40 300,20 L400,0" />
+
+                                <!-- Connecting Lines -->
+                                <path d="M 60 70 L 230 70" stroke="url(#gradFlow)" stroke-width="2.5" class="data-flow-line" />
+                                <path d="M 230 70 L 400 70" stroke="url(#gradFlow)" stroke-width="2.5" class="data-flow-line" />
+
+                                <!-- Node 1: Input -->
+                                <circle cx="60" cy="70" r="28" fill="#0E1A33" stroke="#00F2FE" stroke-width="2" class="node-pulse" />
+                                <text x="60" y="66" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="bold">INPUT</text>
+                                <text x="60" y="80" text-anchor="middle" fill="#94A3B8" font-size="9">Manual Chaos</text>
+
+                                <!-- Center Engine: BennieChat Tech Core -->
+                                <circle cx="230" cy="70" r="38" fill="#132347" stroke="#3B82F6" stroke-width="3" filter="url(#glowEffect)" />
+                                <text x="230" y="65" text-anchor="middle" fill="#00F2FE" font-size="13" font-weight="800">BENNIECHAT</text>
+                                <text x="230" y="80" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="600">Digital Engine</text>
+
+                                <!-- Node 3: Output Value -->
+                                <circle cx="400" cy="70" r="28" fill="#1A153A" stroke="#8B5CF6" stroke-width="2" class="node-pulse" />
+                                <text x="400" y="66" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="bold">WEALTH</text>
+                                <text x="400" y="80" text-anchor="middle" fill="#C4B5FD" font-size="9">Scalable ROI</text>
                             </svg>
                         </div>
-                        <div class="dash-stats">
-                            <div class="stat-box">
-                                <div class="stat-val counter" data-target="85" data-suffix="%">0%</div>
-                                <div class="stat-label">Efficiency Gain</div>
+
+                        <!-- Metric Mini Grid -->
+                        <div class="cockpit-stats-grid">
+                            <div class="cockpit-stat-item">
+                                <div class="stat-label">Operational Efficiency</div>
+                                <div class="stat-value cyan">
+                                    <span class="counter-val" data-target="88" data-suffix="%">0%</span>
+                                    <span class="stat-trend up">↑ 45%</span>
+                                </div>
                             </div>
-                            <div class="stat-box">
-                                <div class="stat-val counter" data-target="1200" data-suffix="+">0+</div>
-                                <div class="stat-label">Automated Tasks</div>
+                            <div class="cockpit-stat-item">
+                                <div class="stat-label">Automated Workflows</div>
+                                <div class="stat-value teal">
+                                    <span class="counter-val" data-target="1450" data-suffix="+">0+</span>
+                                    <span class="stat-trend up">Active</span>
+                                </div>
+                            </div>
+                            <div class="cockpit-stat-item">
+                                <div class="stat-label">System Availability</div>
+                                <div class="stat-value purple">
+                                    <span>99.9%</span>
+                                    <span class="stat-trend up">Uptime</span>
+                                </div>
+                            </div>
+                            <div class="cockpit-stat-item">
+                                <div class="stat-label">CAC Compliance</div>
+                                <div class="stat-value gold">
+                                    <span>RC 9373701</span>
+                                    <span class="stat-trend up">Verified</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -100,287 +227,1303 @@
         </div>
     </section>
 
-    <!-- Core Promise Section -->
-    <section id="promise" class="wm-light">
-        <div class="watermark"><img src="assets/BennieChatLogo.jpeg" alt="BennieChat Watermark"></div>
+    <!-- ==========================================================================
+       Key Metrics Strip
+       ========================================================================== -->
+    <section class="metrics-strip">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>Technology Should Improve Your Business Economy</h2>
-                <p>Technology should not simply make your company look modern. It should help you:</p>
-            </div>
-            <div class="promise-grid">
-                <div class="promise-card reveal">
-                    <div class="icon-box">📉</div>
-                    <h3>Reduce Costs</h3>
-                    <p>Automate repetitive processes and eliminate unnecessary operational inefficiencies.</p>
+            <div class="metrics-grid">
+                <div class="metric-strip-item">
+                    <div class="metric-num"><span class="counter-val" data-target="7" data-suffix="+">0</span></div>
+                    <div class="metric-desc">Years Proven Technical Experience (Since 2021)</div>
                 </div>
-                <div class="promise-card reveal">
-                    <div class="icon-box">📈</div>
-                    <h3>Increase Revenue</h3>
-                    <p>Build better digital experiences that help attract, convert, retain, and serve customers.</p>
+                <div class="metric-strip-item">
+                    <div class="metric-num"><span class="counter-val" data-target="10" data-suffix="">0</span></div>
+                    <div class="metric-desc">Specialized Technology Service Capabilities</div>
                 </div>
-                <div class="promise-card reveal">
-                    <div class="icon-box">⏱️</div>
-                    <h3>Save Time</h3>
-                    <p>Turn manual processes into streamlined digital workflows.</p>
+                <div class="metric-strip-item">
+                    <div class="metric-num"><span class="counter-val" data-target="100" data-suffix="%">0%</span></div>
+                    <div class="metric-desc">Remote-First Modern Delivery Model</div>
                 </div>
-                <div class="promise-card reveal">
-                    <div class="icon-box">⚙️</div>
-                    <h3>Improve Productivity</h3>
-                    <p>Give your team the systems and information they need to work more effectively.</p>
-                </div>
-                <div class="promise-card reveal">
-                    <div class="icon-box">🎯</div>
-                    <h3>Reach More Customers</h3>
-                    <p>Use websites, platforms, and technology to expand your market reach.</p>
-                </div>
-                <div class="promise-card reveal">
-                    <div class="icon-box">💡</div>
-                    <h3>Make Better Decisions</h3>
-                    <p>Transform business information into useful insights and intelligent decision-support systems.</p>
+                <div class="metric-strip-item">
+                    <div class="metric-num">9373701</div>
+                    <div class="metric-desc">Verified CAC Corporate Registration Number</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Methodology Timeline Infographic -->
-    <section id="method">
+    <!-- ==========================================================================
+       Section 1: The Business Economics Engine (Interactive ROI Infographic)
+       ========================================================================== -->
+    <section id="economics" class="section">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>The BennieChat Method</h2>
-                <p>From Business Problem to Digital Solution. We follow a structured path to ensure technology serves your economics.</p>
+            <div class="section-header">
+                <div class="section-badge">Infographic Simulation</div>
+                <h2>Technology for Better <span class="gradient-text">Business Economics</span></h2>
+                <p>
+                    A website should do more than display information; software should simplify real work; digital platforms should provide a foundation for innovation, scalability, and sustainable growth.
+                </p>
             </div>
-            <div class="method-grid">
-                <div class="method-image reveal">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team collaborating on digital strategy">
+
+            <!-- Interactive ROI Calculator Box -->
+            <div class="economics-interactive-box">
+                <div class="economics-header-badge">
+                    <h3><span>⚙️</span> Interactive Operational ROI & Value Simulator</h3>
+                    <span class="section-badge purple">Real-Time Simulation</span>
                 </div>
-                <div class="method-timeline reveal">
-                    <div class="timeline" id="timeline">
-                        <div class="timeline-fill" id="timelineFill"></div>
-                        <div class="step-item">
-                            <div class="step-circle">01</div>
-                            <h4>DISCOVER</h4>
-                            <p>We understand your business, customers, and goals.</p>
+
+                <div class="economics-grid">
+                    <!-- Controls -->
+                    <div class="controls-col">
+                        <div class="slider-group">
+                            <div class="slider-label-row">
+                                <span class="slider-title">Team Size / Staff Count</span>
+                                <span class="slider-current-val" id="teamSizeVal">15 members</span>
+                            </div>
+                            <input type="range" min="1" max="100" value="15" class="custom-range-slider" id="teamSizeSlider" aria-label="Team Size Slider">
                         </div>
-                        <div class="step-item">
-                            <div class="step-circle">02</div>
-                            <h4>DIAGNOSE</h4>
-                            <p>We identify inefficiencies and digital gaps.</p>
+
+                        <div class="slider-group">
+                            <div class="slider-label-row">
+                                <span class="slider-title">Weekly Admin Hours Lost Per Staff</span>
+                                <span class="slider-current-val" id="hoursLostVal">18 hrs/wk</span>
+                            </div>
+                            <input type="range" min="5" max="35" value="18" class="custom-range-slider" id="hoursLostSlider" aria-label="Hours Lost Slider">
                         </div>
-                        <div class="step-item">
-                            <div class="step-circle">03</div>
-                            <h4>DESIGN</h4>
-                            <p>We design the solution around the business requirement.</p>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-circle">04</div>
-                            <h4>DEVELOP</h4>
-                            <p>We build, configure, integrate, and deploy.</p>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-circle">05</div>
-                            <h4>OPTIMIZE</h4>
-                            <p>We continuously look for ways to improve results.</p>
+
+                        <div class="slider-group">
+                            <div class="slider-label-row">
+                                <span class="slider-title">Estimated Internal Value / Hourly Cost</span>
+                                <span class="slider-current-val" id="hourlyRateVal">₦4,500/hr</span>
+                            </div>
+                            <input type="range" min="1500" max="25000" step="500" value="4500" class="custom-range-slider" id="hourlyRateSlider" aria-label="Hourly Rate Slider">
                         </div>
                     </div>
+
+                    <!-- Output Results -->
+                    <div class="results-col">
+                        <div class="roi-card-primary">
+                            <div>
+                                <div class="roi-title">Annual Productive Hours Recovered</div>
+                                <div class="roi-big-value" id="roiHoursSaved">9,828 hrs</div>
+                                <div class="roi-sub">Reinvested directly into core revenue-generating operations</div>
+                            </div>
+                            <div style="font-size:3rem;">⏱️</div>
+                        </div>
+
+                        <div class="roi-card-primary" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(0, 242, 254, 0.1)); border-color: rgba(16, 185, 129, 0.4);">
+                            <div>
+                                <div class="roi-title">Estimated Annual Capital Value Unlocked</div>
+                                <div class="roi-big-value" id="roiCapitalSaved" style="color:#34D399;">₦44.2M+</div>
+                                <div class="roi-sub">Eliminates administrative duplication & manual inefficiencies</div>
+                            </div>
+                            <div style="font-size:3rem;">💰</div>
+                        </div>
+
+                        <div class="roi-stats-triple">
+                            <div class="roi-mini-stat">
+                                <div class="num" id="roiVelocity">+4.0x</div>
+                                <div class="lbl">Turnaround Velocity</div>
+                            </div>
+                            <div class="roi-mini-stat">
+                                <div class="num" id="roiErrorReduction">-85%</div>
+                                <div class="lbl">Human Error Risk</div>
+                            </div>
+                            <div class="roi-mini-stat">
+                                <div class="num" style="color:#A78BFA;">24/7</div>
+                                <div class="lbl">Automated Readiness</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Matrix -->
+            <div class="comparison-grid">
+                <div class="comparison-card negative">
+                    <div class="comp-header neg">
+                        <span>❌</span> The Fragmented Business (Traditional)
+                    </div>
+                    <ul class="comp-list">
+                        <li><span class="icon">⚠️</span> Disconnected WhatsApp messages, physical papers, and manual Excel sheets</li>
+                        <li><span class="icon">⚠️</span> Lost customer enquiries and untracked service requests</li>
+                        <li><span class="icon">⚠️</span> Bottlenecks in managerial approvals and document distribution</li>
+                        <li><span class="icon">⚠️</span> Static online brochure that brings zero commercial value or leads</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card positive">
+                    <div class="comp-header pos">
+                        <span>✅</span> The BennieChat Solution (Technology That Improves)
+                    </div>
+                    <ul class="comp-list">
+                        <li><span class="icon">⚡</span> Centralized web portals, digital records, and structured cloud workflows</li>
+                        <li><span class="icon">⚡</span> Automated customer onboarding, payment verification, and instant notifications</li>
+                        <li><span class="icon">⚡</span> Role-based management dashboards with real-time operational visibility</li>
+                        <li><span class="icon">⚡</span> Credible corporate presence that positions you for major contracts and tenders</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Industries Section -->
-    <section id="industries" class="wm-light">
-        <div class="watermark"><img src="assets/BennieChatLogo.jpeg" alt="BennieChat Watermark"></div>
+    <!-- ==========================================================================
+       Section 2: The 10 Specialized Capabilities Matrix
+       ========================================================================== */
+    <section id="capabilities" class="section" style="background: var(--bg-primary);">
         <div class="container">
-            <div class="section-header reveal">
-                <h2>Our Industry Experience</h2>
-                <p>From business websites to digital platforms, our experience spans multiple industries and use cases.</p>
+            <div class="section-header">
+                <div class="section-badge">Service Portfolio</div>
+                <h2>Ten Service Areas, <span class="gradient-text">One Business Outcome</span></h2>
+                <p>
+                    From first online presence to integrated digital operations. Each capability is scoped per engagement — the feature set, platform, and delivery approach follow the requirement, never the reverse.
+                </p>
             </div>
-            <div class="industry-grid">
-                <div class="industry-item reveal">
-                    <img class="industry-bg" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80" alt="Oil & Gas Industry">
-                    <div class="industry-overlay">
-                        <h4>Oil & Gas</h4>
-                        <p>Digital presence & business systems</p>
-                    </div>
-                </div>
-                <div class="industry-item reveal">
-                    <img class="industry-bg" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Engineering Industry">
-                    <div class="industry-overlay">
-                        <h4>Engineering</h4>
-                        <p>Operational systems & documentation</p>
-                    </div>
-                </div>
-                <div class="industry-item reveal">
-                    <img class="industry-bg" src="https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=600&q=80" alt="Marine Industry">
-                    <div class="industry-overlay">
-                        <h4>Marine</h4>
-                        <p>Digital platforms & tech solutions</p>
-                    </div>
-                </div>
-                <div class="industry-item reveal">
-                    <img class="industry-bg" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Education Industry">
-                    <div class="industry-overlay">
-                        <h4>Education</h4>
-                        <p>Learning management & portals</p>
-                    </div>
-                </div>
-                <div class="industry-item reveal">
-                    <img class="industry-bg" src="https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=600&q=80" alt="Churches & Ministries">
-                    <div class="industry-overlay">
-                        <h4>Churches</h4>
-                        <p>Communication & media platforms</p>
-                    </div>
-                </div>
-                <div class="industry-item reveal">
-                    <img class="industry-bg" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80" alt="Fashion & Retail">
-                    <div class="industry-overlay">
-                        <h4>Fashion & Retail</h4>
-                        <p>E-commerce & customer experiences</p>
-                    </div>
-                </div>
-                <div class="industry-item reveal">
-                    <img class="industry-bg" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Professional Services">
-                    <div class="industry-overlay">
-                        <h4>Professional</h4>
-                        <p>Lead-generation & corporate websites</p>
-                    </div>
-                </div>
-                <div class="industry-item reveal">
-                    <img class="industry-bg" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Tech & Startups">
-                    <div class="industry-overlay">
-                        <h4>Tech & Startups</h4>
-                        <p>SaaS concepts & AI systems</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Services Section -->
-    <section id="services" class="wm-dark">
-        <div class="watermark"><img src="assets/BennieChatLogo.jpeg" alt="BennieChat Watermark"></div>
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Digital Solutions Built Around Your Business</h2>
-                <p>We combine technology, business thinking, automation, and digital strategy to create solutions designed around real operational needs.</p>
+            <!-- Category Filter Buttons -->
+            <div class="capability-filters">
+                <button class="cap-filter-btn active" data-filter="all">All (10 Services)</button>
+                <button class="cap-filter-btn" data-filter="Web & SaaS">Web & SaaS</button>
+                <button class="cap-filter-btn" data-filter="Automation & Process">Automation & Process</button>
+                <button class="cap-filter-btn" data-filter="Advanced & AI">AI & Emerging Tech</button>
+                <button class="cap-filter-btn" data-filter="Enterprise & Commerce">E-Commerce</button>
+                <button class="cap-filter-btn" data-filter="Advisory & Training">Consulting & Training</button>
             </div>
-            
-            <div class="services-flex">
-                <div class="service-row reveal">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Website & Web Apps">
-                    </div>
-                    <div class="service-content">
-                        <h3>Website & Web Apps</h3>
-                        <p>Your website should be more than an online brochure. We build professional digital experiences designed to communicate your value proposition, establish credibility, generate leads, and support business growth.</p>
-                        <div class="service-tags">
-                            <span class="tag">Corporate Websites</span><span class="tag">E-commerce</span>
-                            <span class="tag">Web Applications</span><span class="tag">Dashboards</span><span class="tag">Membership Platforms</span>
+
+            <!-- 10 Capability Cards Grid -->
+            <div class="capabilities-grid">
+                <!-- 01 Website Design & Development -->
+                <div class="glass-card capability-card" data-category="Web & SaaS">
+                    <div class="cap-card-top">
+                        <div class="cap-card-header">
+                            <span class="cap-num">SERVICE 01</span>
+                            <span class="cap-status-pill established">Established Experience</span>
                         </div>
+                        <div class="cap-icon">🌐</div>
+                        <h3>Website Design & Development</h3>
+                        <p>Corporate, institutional, and commercial websites built as working business assets that establish credibility and generate leads.</p>
+                        <ul class="cap-deliverables">
+                            <li>Corporate & Institutional Websites</li>
+                            <li>Product & Service Landing Pages</li>
+                            <li>Mobile-First Responsive Layouts</li>
+                        </ul>
                     </div>
+                    <button class="cap-view-btn" data-cap="cap-01">Explore Specifications →</button>
                 </div>
 
-                <div class="service-row reveal">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Digital Transformation">
+                <!-- 02 WordPress & No-Code -->
+                <div class="glass-card capability-card" data-category="Web & SaaS">
+                    <div class="cap-card-top">
+                        <div class="cap-card-header">
+                            <span class="cap-num">SERVICE 02</span>
+                            <span class="cap-status-pill established">Established Experience</span>
+                        </div>
+                        <div class="cap-icon">⚡</div>
+                        <h3>WordPress & No-Code Development</h3>
+                        <p>Practical rapid delivery combining proven CMS architectures with customized themes, plugins, and client management workflows.</p>
+                        <ul class="cap-deliverables">
+                            <li>Theme & Page Builder Architecture</li>
+                            <li>Content Management System (CMS)</li>
+                            <li>Membership & Access Restriction</li>
+                        </ul>
                     </div>
-                    <div class="service-content">
+                    <button class="cap-view-btn" data-cap="cap-02">Explore Specifications →</button>
+                </div>
+
+                <!-- 03 Software & Web Apps -->
+                <div class="glass-card capability-card" data-category="Web & SaaS">
+                    <div class="cap-card-top">
+                        <div class="cap-card-header">
+                            <span class="cap-num">SERVICE 03</span>
+                            <span class="cap-status-pill established">Established Experience</span>
+                        </div>
+                        <div class="cap-icon">💻</div>
+                        <h3>Software & Web Applications</h3>
+                        <p>Browser-based business applications, administrative dashboards, client portals, record systems, and scalable Minimum Viable Products.</p>
+                        <ul class="cap-deliverables">
+                            <li>Administrative Dashboards & Portals</li>
+                            <li>Role-Based Access Control (RBAC)</li>
+                            <li>Internal Operational Workflows</li>
+                        </ul>
+                    </div>
+                    <button class="cap-view-btn" data-cap="cap-03">Explore Specifications →</button>
+                </div>
+
+                <!-- 04 SaaS & Digital Products -->
+                <div class="glass-card capability-card" data-category="Web & SaaS">
+                    <div class="cap-card-top">
+                        <div class="cap-card-header">
+                            <span class="cap-num">SERVICE 04</span>
+                            <span class="cap-status-pill established">Established Experience</span>
+                        </div>
+                        <div class="cap-icon">☁️</div>
+                        <h3>SaaS & Digital Products</h3>
+                        <p>Subscription-software architectures, multi-user platforms, digital service tools, and structured MVP product development roadmaps.</p>
+                        <ul class="cap-deliverables">
+                            <li>Multi-Tenant Database Architecture</li>
+                            <li>Subscription Billing Integration</li>
+                            <li>User Account & Organization Tools</li>
+                        </ul>
+                    </div>
+                    <button class="cap-view-btn" data-cap="cap-04">Explore Specifications →</button>
+                </div>
+
+                <!-- 05 Digital Transformation -->
+                <div class="glass-card capability-card" data-category="Automation & Process">
+                    <div class="cap-card-top">
+                        <div class="cap-card-header">
+                            <span class="cap-num">SERVICE 05</span>
+                            <span class="cap-status-pill established">Established Experience</span>
+                        </div>
+                        <div class="cap-icon">🔄</div>
                         <h3>Digital Transformation</h3>
-                        <p>Turn Manual Business Processes Into Digital Systems. If your team is still depending heavily on spreadsheets, paper forms, WhatsApp messages, or disconnected systems, there may be a better way.</p>
-                        <div class="service-tags">
-                            <span class="tag">Customer Onboarding</span><span class="tag">Inventory</span>
-                            <span class="tag">Approvals</span><span class="tag">Record Keeping</span><span class="tag">Data Collection</span>
-                        </div>
+                        <p>Digitising manual paperwork, reviewing paper forms, structuring operational business data, and reducing administrative duplication.</p>
+                        <ul class="cap-deliverables">
+                            <li>Paperwork & Form Digitisation</li>
+                            <li>Structured Digital Record Keeping</li>
+                            <li>Administrative Bottleneck Audits</li>
+                        </ul>
                     </div>
+                    <button class="cap-view-btn" data-cap="cap-05">Explore Specifications →</button>
                 </div>
 
-                <div class="service-row reveal">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Software & SaaS">
-                    </div>
-                    <div class="service-content">
-                        <h3>Software & SaaS</h3>
-                        <p>Don't Adapt Your Business to Software. Build Software Around Your Business. We design and develop digital platforms capable of supporting complex business processes and recurring operations.</p>
-                        <div class="service-tags">
-                            <span class="tag">SaaS Platforms</span><span class="tag">Management Systems</span>
-                            <span class="tag">Portals</span><span class="tag">Marketplaces</span><span class="tag">Workflow Systems</span>
+                <!-- 06 Workflow Automation -->
+                <div class="glass-card capability-card" data-category="Automation & Process">
+                    <div class="cap-card-top">
+                        <div class="cap-card-header">
+                            <span class="cap-num">SERVICE 06</span>
+                            <span class="cap-status-pill established">Established Experience</span>
                         </div>
+                        <div class="cap-icon">⚙️</div>
+                        <h3>Workflow Automation</h3>
+                        <p>Automated form handling, cross-platform notifications, record processing, multi-level approvals, and automated reporting systems.</p>
+                        <ul class="cap-deliverables">
+                            <li>Instant Email / SMS / WhatsApp Alerts</li>
+                            <li>Multi-Level Approval Pipelines</li>
+                            <li>Automated Document & Report Generation</li>
+                        </ul>
                     </div>
+                    <button class="cap-view-btn" data-cap="cap-06">Explore Specifications →</button>
                 </div>
 
-                <div class="service-row reveal">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80" alt="AI & Automation">
-                    </div>
-                    <div class="service-content">
-                        <h3>AI & Automation</h3>
-                        <p>Make Your Business Smarter. Used properly, AI can become a practical business tool. AI should solve a business problem — not become another expensive buzzword.</p>
-                        <div class="service-tags">
-                            <span class="tag">Automated Work</span><span class="tag">Decision Support</span>
-                            <span class="tag">Content Generation</span><span class="tag">Smart Workflows</span><span class="tag">Business Alerts</span>
+                <!-- 07 AI & Data Solutions -->
+                <div class="glass-card capability-card" data-category="Advanced & AI">
+                    <div class="cap-card-top">
+                        <div class="cap-card-header">
+                            <span class="cap-num">SERVICE 07</span>
+                            <span class="cap-status-pill developing">Developing Capability</span>
                         </div>
+                        <div class="cap-icon">🤖</div>
+                        <h3>AI & Data Solutions</h3>
+                        <p>AI-enabled applications, intelligent information-processing, predictive analytics concepts, and decision-support systems.</p>
+                        <ul class="cap-deliverables">
+                            <li>Intelligent Document Processing</li>
+                            <li>Data-Driven Decision Support Models</li>
+                            <li>Conversational Agent Prototyping</li>
+                        </ul>
                     </div>
+                    <button class="cap-view-btn" data-cap="cap-07">Explore Specifications →</button>
+                </div>
+
+                <!-- 08 Blockchain & Web3 -->
+                <div class="glass-card capability-card" data-category="Advanced & AI">
+                    <div class="cap-card-top">
+                        <div class="cap-card-header">
+                            <span class="cap-num">SERVICE 08</span>
+                            <span class="cap-status-pill developing">Developing Capability</span>
+                        </div>
+                        <div class="cap-icon">🔗</div>
+                        <h3>Blockchain & Web3 Solutions</h3>
+                        <p>Blockchain as a Service (BaaS) concepts, decentralized community platforms, and cryptographic verification workflows scoped per feasibility.</p>
+                        <ul class="cap-deliverables">
+                            <li>BaaS Architecture Formulation</li>
+                            <li>Decentralized Community Identity</li>
+                            <li>Feasibility & Regulatory Risk Assessment</li>
+                        </ul>
+                    </div>
+                    <button class="cap-view-btn" data-cap="cap-08">Explore Specifications →</button>
+                </div>
+
+                <!-- 09 E-Commerce & Commerce -->
+                <div class="glass-card capability-card" data-category="Enterprise & Commerce">
+                    <div class="cap-card-top">
+                        <div class="cap-card-header">
+                            <span class="cap-num">SERVICE 09</span>
+                            <span class="cap-status-pill established">Established Experience</span>
+                        </div>
+                        <div class="cap-icon">🛍️</div>
+                        <h3>E-Commerce & Digital Commerce</h3>
+                        <p>Online catalogues, storefronts, secure ordering workflows, customer accounts, and seamless payment gateway integrations.</p>
+                        <ul class="cap-deliverables">
+                            <li>Filterable Product Catalogues</li>
+                            <li>Payment Gateway Integration (Paystack/Stripe)</li>
+                            <li>Automated Customer Order Tracking</li>
+                        </ul>
+                    </div>
+                    <button class="cap-view-btn" data-cap="cap-09">Explore Specifications →</button>
+                </div>
+
+                <!-- 10 Consulting & Training -->
+                <div class="glass-card capability-card" data-category="Advisory & Training">
+                    <div class="cap-card-top">
+                        <div class="cap-card-header">
+                            <span class="cap-num">SERVICE 10</span>
+                            <span class="cap-status-pill established">Established Experience</span>
+                        </div>
+                        <div class="cap-icon">🎓</div>
+                        <h3>Technology Consulting & Training</h3>
+                        <p>Requirements analysis, technology stack selection, digital project roadmaps, and hands-on team technology training.</p>
+                        <ul class="cap-deliverables">
+                            <li>Procurement Technical Scoping</li>
+                            <li>Platform Architecture Advisory</li>
+                            <li>Team Training on Modern Digital Tools</li>
+                        </ul>
+                    </div>
+                    <button class="cap-view-btn" data-cap="cap-10">Explore Specifications →</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section id="cta">
+    <!-- ==========================================================================
+       Section 3: 5-Phase Structured Delivery Lifecycle Pipeline
+       ========================================================================== -->
+    <section id="methodology" class="section">
         <div class="container">
-            <div class="cta-box reveal wm-dark">
-                <div class="watermark"><img src="assets/BennieChatLogo.jpeg" alt="BennieChat Watermark"></div>
-                <h2>Let's Build Technology That Pays for Itself.</h2>
-                <p>Your business deserves more than a website. It deserves technology that helps it operate better, sell better, serve better, scale better, and compete better.</p>
-                <a href="https://wa.link/m4thsq" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Request Free Consultation</a>
+            <div class="section-header">
+                <div class="section-badge">Methodology</div>
+                <h2>Structured Delivery, <span class="gradient-text">Honest Validation</span></h2>
+                <p>
+                    Every engagement follows our 5-phase delivery model. Clear milestones, documented deliverables, and honest validation at each step.
+                </p>
+            </div>
+
+            <div class="pipeline-container">
+                <!-- Interactive Stepper Track -->
+                <div class="pipeline-track">
+                    <div class="pipeline-step-node active" data-step="1">
+                        <div class="node-bullet">01</div>
+                        <div class="node-phase-title">Understand</div>
+                        <div class="node-phase-sub">Requirements</div>
+                    </div>
+                    <div class="pipeline-step-node" data-step="2">
+                        <div class="node-bullet">02</div>
+                        <div class="node-phase-title">Design</div>
+                        <div class="node-phase-sub">Solution Architecture</div>
+                    </div>
+                    <div class="pipeline-step-node" data-step="3">
+                        <div class="node-bullet">03</div>
+                        <div class="node-phase-title">Build</div>
+                        <div class="node-phase-sub">Engineering & Code</div>
+                    </div>
+                    <div class="pipeline-step-node" data-step="4">
+                        <div class="node-bullet">04</div>
+                        <div class="node-phase-title">Validate</div>
+                        <div class="node-phase-sub">Testing & Review</div>
+                    </div>
+                    <div class="pipeline-step-node" data-step="5">
+                        <div class="node-bullet">05</div>
+                        <div class="node-phase-title">Support</div>
+                        <div class="node-phase-sub">Handover & SLA</div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Detail Panel -->
+                <div class="pipeline-detail-card" id="pipelineDetailCard">
+                    <div class="pipeline-detail-info">
+                        <h4 id="pipelinePhaseTitle">Phase 01: Requirements Definition</h4>
+                        <p id="pipelinePhaseDesc">
+                            We establish a rigorous understanding of the business problem, target audience, existing technical infrastructure, constraints, and measurable economic objectives before proposing any technology.
+                        </p>
+                        <div style="font-size:0.875rem; color:var(--teal-accent); background:rgba(0, 210, 180, 0.08); padding:12px; border-radius:8px; border-left:3px solid var(--teal-accent);">
+                            <strong>Quality Commitment:</strong> <span id="pipelinePhaseQuality">Requirements Matrix signed off; ensures technology follows outcome, not trend.</span>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-deliverables-box">
+                        <h5>Key Phase Deliverables</h5>
+                        <ul id="pipelinePhaseList">
+                            <li>Business Problem Statement & Desired Economics Matrix</li>
+                            <li>Stakeholder & Target User Persona Profiles</li>
+                            <li>Existing Systems & Data Sources Inventory</li>
+                            <li>Defined Functional Deliverables & Constraints</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ==========================================================================
+       Section 4: Proprietary Product Initiatives (The Innovation Lab)
+       ========================================================================== -->
+    <section id="innovation" class="section" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge purple">Venture & Innovation Lab</div>
+                <h2>Building Beyond <span class="gradient-text">Client Work</span></h2>
+                <p>
+                    BennieChat explores and develops internal technology ventures for selected markets. Because product maturity varies, each initiative is represented transparently according to its actual status.
+                </p>
+            </div>
+
+            <div class="lab-header-banner">
+                <div class="lab-banner-text">
+                    <h4 style="color:#C4B5FD; margin-bottom:4px;">Dual Operating Direction: Client Delivery + Proprietary Products</h4>
+                    <p>Client service work sharpens our understanding of recurring business needs, while product initiatives convert that understanding into reusable technology.</p>
+                </div>
+                <div style="font-size:2.5rem;">🧪</div>
+            </div>
+
+            <!-- Lab Ventures Grid -->
+            <div class="lab-grid">
+                <!-- Zoniva TV -->
+                <div class="glass-card venture-card">
+                    <span class="venture-badge">Concept & Functional Direction</span>
+                    <h3>Zoniva TV</h3>
+                    <div class="venture-category">Digital Media · Continuous Platform</div>
+                    <p>A digital television platform initiative exploring continuous, channel-based viewing using YouTube content — closer to traditional TV with curated scheduling and seamless transitions.</p>
+                    <div class="venture-features-pill-group">
+                        <span class="venture-pill">TV-Style Flow</span>
+                        <span class="venture-pill">Channel Guides</span>
+                        <span class="venture-pill">Playback Sync</span>
+                    </div>
+                    <button class="venture-modal-trigger" data-venture="zoniva">View Architecture Brief →</button>
+                </div>
+
+                <!-- GetiDone -->
+                <div class="glass-card venture-card">
+                    <span class="venture-badge">Internal Venture</span>
+                    <h3>GetiDone</h3>
+                    <div class="venture-category">Productivity & Task Execution</div>
+                    <p>A proprietary digital venture streamlining task execution, deliverable tracking, team accountability, and workflow milestone completion.</p>
+                    <div class="venture-features-pill-group">
+                        <span class="venture-pill">Milestone Tracking</span>
+                        <span class="venture-pill">Verification Gates</span>
+                        <span class="venture-pill">Team Dashboards</span>
+                    </div>
+                    <button class="venture-modal-trigger" data-venture="getidone">View Architecture Brief →</button>
+                </div>
+
+                <!-- ROSCA AI -->
+                <div class="glass-card venture-card">
+                    <span class="venture-badge">Internal Venture · AI Direction</span>
+                    <h3>ROSCA AI™</h3>
+                    <div class="venture-category">FinTech · Community Intelligence</div>
+                    <p>A proprietary AI-oriented technology initiative exploring machine intelligence applied to Rotating Savings and Credit Associations (ROSCAs) and community capital pooling.</p>
+                    <div class="venture-features-pill-group">
+                        <span class="venture-pill">AI Risk Scoring</span>
+                        <span class="venture-pill">Cycle Automation</span>
+                        <span class="venture-pill">Predictive Alerts</span>
+                    </div>
+                    <button class="venture-modal-trigger" data-venture="rosca">View Architecture Brief →</button>
+                </div>
+
+                <!-- HotelShield -->
+                <div class="glass-card venture-card">
+                    <span class="venture-badge">Internal Venture · Hospitality</span>
+                    <h3>HotelShield™</h3>
+                    <div class="venture-category">Hospitality · Access & Security</div>
+                    <p>Substantial product initiative exploring digital guest verification, room management, and security governance tailored to hospitality operational requirements.</p>
+                    <div class="venture-features-pill-group">
+                        <span class="venture-pill">Guest Verification</span>
+                        <span class="venture-pill">Front-Desk Sync</span>
+                        <span class="venture-pill">Incident Audit</span>
+                    </div>
+                    <button class="venture-modal-trigger" data-venture="hotelshield">View Architecture Brief →</button>
+                </div>
+
+                <!-- Mountain-Top Seminary LMS -->
+                <div class="glass-card venture-card">
+                    <span class="venture-badge">Proposed System Concept</span>
+                    <h3>Mountain-Top LMS Concept</h3>
+                    <div class="venture-category">Higher Education · Operations LMS</div>
+                    <p>Planning work on a proposed WordPress-based university operations solution with automated matriculation number generation, admission-letter workflows, and Zoom integration.</p>
+                    <div class="venture-features-pill-group">
+                        <span class="venture-pill">Matriculation Automation</span>
+                        <span class="venture-pill">Zoom Lectures</span>
+                        <span class="venture-pill">ID Card Generator</span>
+                    </div>
+                    <button class="venture-modal-trigger" data-venture="seminary">View Architecture Brief →</button>
+                </div>
+
+                <!-- AI Football Match Prediction -->
+                <div class="glass-card venture-card">
+                    <span class="venture-badge">Concept & Analytics Model</span>
+                    <h3>AI Football Analytics Model</h3>
+                    <div class="venture-category">Sports Analytics · Statistical Modeling</div>
+                    <p>An AI web-application concept analysing football match form across 5-10 previous matches, generating probability models for Double Chance, BTTS, and Over/Under markets.</p>
+                    <div class="venture-features-pill-group">
+                        <span class="venture-pill">Probability Engine</span>
+                        <span class="venture-pill">Form Metric Curves</span>
+                        <span class="venture-pill">80% Design Objective</span>
+                    </div>
+                    <button class="venture-modal-trigger" data-venture="football">View Architecture Brief →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Section 5: Verifiable Client Portfolio & Case Studies
+       ========================================================================== -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Verifiable Evidence</div>
+                <h2>Work That Can Be <span class="gradient-text">Examined</span></h2>
+                <p>
+                    BennieChat encourages evidence-based evaluation. Completed client deliverables, internal ventures, and company-profile assignments are classified honestly and never confused.
+                </p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Beam Dynamic Solutions -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <span class="portfolio-sector-tag">Energy · Oil & Gas Servicing</span>
+                        <h3>Beam Dynamic Solutions Limited</h3>
+                        <span class="classification-badge live">● Completed Website · Live</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <p>Corporate web presence for an energy-sector engineering company, demonstrating experience creating a dedicated online presentation of technical services, credibility, and client engagement channels.</p>
+                        <div class="evidence-scope-note">
+                            <strong>Evidence:</strong> Publicly accessible live production site at beamdsl.com
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span style="font-size:0.8rem; color:var(--text-muted);">Corporate Website Delivery</span>
+                        <a href="https://www.beamdsl.com" target="_blank" rel="noopener noreferrer" class="portfolio-link-btn">
+                            Visit Live Site ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mekadyne Oil and Gas -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <span class="portfolio-sector-tag">Oil & Gas</span>
+                        <h3>Mekadyne Oil and Gas Limited</h3>
+                        <span class="classification-badge ref">● Website · Portfolio Reference</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <p>Digital presentation for an oil and gas sector business, presenting technical industrial capabilities to corporate markets and procurement evaluators.</p>
+                        <div class="evidence-scope-note">
+                            <strong>Scope Clarification:</strong> Digital technology provider role; distinct from physical oilfield operations.
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span style="font-size:0.8rem; color:var(--text-muted);">Sector Web Presence</span>
+                        <a href="https://www.mekadyneoilandgas.org.ng" target="_blank" rel="noopener noreferrer" class="portfolio-link-btn">
+                            Visit Site ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Harper's Concept Limited -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <span class="portfolio-sector-tag">Engineering · Marine · Consulting</span>
+                        <h3>Harper's Concept Limited</h3>
+                        <span class="classification-badge content">● Website + Corporate Content</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <p>Digital presentation and structured information architecture for a multi-disciplinary company spanning marine, civil engineering, oil and gas construction, and consulting.</p>
+                        <div class="evidence-scope-note">
+                            <strong>Associated Scope:</strong> Corporate content & service-portfolio organization.
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span style="font-size:0.8rem; color:var(--text-muted);">Multi-Disciplinary Presentation</span>
+                        <a href="https://www.harpersconceptltd.com" target="_blank" rel="noopener noreferrer" class="portfolio-link-btn">
+                            Visit Site ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tabit Clothing -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <span class="portfolio-sector-tag">Fashion & Retail</span>
+                        <h3>Tabit Clothing & Accessories</h3>
+                        <span class="classification-badge ref">● Associated Business Context</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <p>Female clothing and accessories brand with online tutorials on accessory production and millinery materials — context for product catalogues, e-commerce, and enquiry workflows.</p>
+                        <div class="evidence-scope-note">
+                            <strong>Classification:</strong> Commercial context for retail technology and digital education.
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span style="font-size:0.8rem; color:var(--text-muted);">Catalogue & Enquiry Flow</span>
+                        <span class="portfolio-link-btn" style="color:var(--text-muted);">Commercial Context</span>
+                    </div>
+                </div>
+
+                <!-- IfyGold Collections -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <span class="portfolio-sector-tag">Fashion & General Merchandise</span>
+                        <h3>IfyGold Collections</h3>
+                        <span class="classification-badge ref">● Associated Business Context</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <p>Clothing, household goods, kitchenware, and retail accessories — providing practical context for digital storefronts, multi-category inventory, and customer engagement.</p>
+                        <div class="evidence-scope-note">
+                            <strong>Classification:</strong> Retail & merchandise commercial digital operations.
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span style="font-size:0.8rem; color:var(--text-muted);">Retail Commercial Context</span>
+                        <span class="portfolio-link-btn" style="color:var(--text-muted);">Commercial Context</span>
+                    </div>
+                </div>
+
+                <!-- VATEX Engineering -->
+                <div class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <span class="portfolio-sector-tag">Engineering & Oil Servicing</span>
+                        <h3>VATEX Engineering Services</h3>
+                        <span class="classification-badge content">● Company-Profile & Content Work</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <p>Company-profile development and corporate communication in the civil, mechanical, and oil servicing context — demonstrating corporate presentation for technical service providers.</p>
+                        <div class="evidence-scope-note">
+                            <strong>Classification:</strong> Technical documentation and corporate profile engineering.
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span style="font-size:0.8rem; color:var(--text-muted);">Technical Content Strategy</span>
+                        <span class="portfolio-link-btn" style="color:var(--text-muted);">Corporate Profile</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evidence Matrix Banner -->
+            <div class="evidence-matrix-banner">
+                <div class="evidence-matrix-text">
+                    <h4>The Project Evidence Matrix</h4>
+                    <p>Every major proposal is accompanied by verifiable evidence standards.</p>
+                </div>
+                <div class="evidence-matrix-pills">
+                    <span class="matrix-pill-item"><span>✓</span> Live Accessible URLs</span>
+                    <span class="matrix-pill-item"><span>✓</span> Interface Screenshots</span>
+                    <span class="matrix-pill-item"><span>✓</span> GitHub Repositories</span>
+                    <span class="matrix-pill-item"><span>✓</span> Project Specifications</span>
+                    <span class="matrix-pill-item"><span>✓</span> Acceptance Records</span>
+                    <span class="matrix-pill-item"><span>✓</span> Technical Docs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Section 6: Industry Applications (7 Sectors Interactive Matrix)
+       ========================================================================== -->
+    <section id="industries" class="section" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Sector Focus</div>
+                <h2>Where the Capabilities <span class="gradient-text">Apply</span></h2>
+                <p>
+                    Tailored digital solutions across seven key economic sectors — aligned with real operational realities.
+                </p>
+            </div>
+
+            <div class="industries-cockpit">
+                <!-- Industry Nav List -->
+                <div class="industry-nav-list">
+                    <button class="industry-tab-btn active" data-industry="oilgas">
+                        <span class="ind-icon">🛢️</span> Oil & Gas
+                    </button>
+                    <button class="industry-tab-btn" data-industry="engineering">
+                        <span class="ind-icon">⚙️</span> Engineering & Industrial
+                    </button>
+                    <button class="industry-tab-btn" data-industry="government">
+                        <span class="ind-icon">🏛️</span> Government & Public Sector
+                    </button>
+                    <button class="industry-tab-btn" data-industry="education">
+                        <span class="ind-icon">🎓</span> Education & Training
+                    </button>
+                    <button class="industry-tab-btn" data-industry="fashion">
+                        <span class="ind-icon">🛍️</span> Fashion, Retail & Commerce
+                    </button>
+                    <button class="industry-tab-btn" data-industry="hospitality">
+                        <span class="ind-icon">🏨</span> Hospitality & Services
+                    </button>
+                    <button class="industry-tab-btn" data-industry="startups">
+                        <span class="ind-icon">🚀</span> Startups & Entrepreneurs
+                    </button>
+                </div>
+
+                <!-- Industry Display Panel -->
+                <div class="industry-display-panel">
+                    <div class="ind-title-row">
+                        <h3 id="indDisplayTitle">Oil & Gas Sector</h3>
+                        <span class="section-badge">Sector 01</span>
+                    </div>
+
+                    <div class="ind-solutions-grid">
+                        <div class="ind-sol-box">
+                            <h5>Sector Challenges</h5>
+                            <p id="indChallengesText">
+                                Complex operations, stringent procurement audits, requirement for professional international credibility, technical service presentation, and safety compliance demonstration.
+                            </p>
+                        </div>
+                        <div class="ind-sol-box">
+                            <h5>BennieChat Tailored Solutions</h5>
+                            <p id="indSolutionText">
+                                High-credibility corporate websites, digital presentation of technical service capabilities, inquiry portals, administrative record management, and material tracking solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="background:rgba(0, 242, 254, 0.05); padding:16px; border-radius:8px; border-left:3px solid var(--cyan-glow);">
+                        <strong style="color:var(--cyan-glow); font-size:0.85rem; text-transform:uppercase;">Demonstrated Context & Reference:</strong>
+                        <p id="indRefText" style="margin:4px 0 0; font-size:0.9rem; color:#CBD5E1;">
+                            Work associated with Mekadyne Oil and Gas Limited, Beam Dynamic Solutions Limited. (Note: Technology solutions provider; physical oilfield contracting kept distinct).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Section 7: Corporate Trust, Governance & Procurement Readiness
+       ========================================================================== -->
+    <section id="procurement" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge gold">Corporate Governance</div>
+                <h2>Verified Particulars, <span class="gradient-text">Documented Readiness</span></h2>
+                <p>
+                    BennieChat maintains valid corporate and tax compliance documentation to support corporate and public-sector procurement.
+                </p>
+            </div>
+
+            <div class="trust-procurement-grid">
+                <!-- CAC Certificate Preview Card -->
+                <div class="cac-preview-card">
+                    <div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                            <h4 style="font-size:1.2rem;">CAC Registration Certificate</h4>
+                            <span class="proc-held-badge">CERTIFIED HELD</span>
+                        </div>
+
+                        <div class="cac-image-wrapper open-cac-modal" title="Click to view full certificate">
+                            <img src="assets/cac-cert.png" alt="Corporate Affairs Commission Certificate of Registration for BennieChat TechWealth Solutions">
+                            <div class="cac-image-overlay">
+                                <span class="btn btn-primary btn-sm">🔍 Inspect Official Certificate</span>
+                            </div>
+                        </div>
+
+                        <table class="cac-data-table">
+                            <tr>
+                                <td>Registered Business Name</td>
+                                <td>BennieChat TechWealth Solutions</td>
+                            </tr>
+                            <tr>
+                                <td>CAC Registration Number</td>
+                                <td><span style="color:var(--cyan-glow); font-family:'JetBrains Mono'; font-weight:700;">9373701</span></td>
+                            </tr>
+                            <tr>
+                                <td>Legal Framework</td>
+                                <td>Companies and Allied Matters Act 2020</td>
+                            </tr>
+                            <tr>
+                                <td>Date of Registration</td>
+                                <td>26 February 2026 (Abuja, Nigeria)</td>
+                            </tr>
+                            <tr>
+                                <td>Nature of Business</td>
+                                <td>Technology & Software</td>
+                            </tr>
+                            <tr>
+                                <td>Operating Location</td>
+                                <td>Ughelli North, Delta State, Nigeria</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <button class="btn btn-secondary open-cac-modal" style="margin-top:20px; width:100%;">
+                        Open Certificate In High-Resolution →
+                    </button>
+                </div>
+
+                <!-- Procurement Documentation Checklist -->
+                <div class="procurement-checklist-card">
+                    <h4 style="font-size:1.2rem; margin-bottom:16px;">Procurement Documentation Checklist</h4>
+                    <p style="font-size:0.875rem; color:var(--text-muted); margin-bottom:20px;">
+                        The company states only what it possesses, distinguishing held documentation from items prepared per opportunity.
+                    </p>
+
+                    <div class="proc-check-item">
+                        <span class="proc-check-title">CAC Certificate of Registration</span>
+                        <span class="proc-held-badge">HELD (No. 9373701)</span>
+                    </div>
+                    <div class="proc-check-item">
+                        <span class="proc-check-title">Corporate Profile & Capability Statement</span>
+                        <span class="proc-held-badge">HELD (2026 Edition)</span>
+                    </div>
+                    <div class="proc-check-item">
+                        <span class="proc-check-title">Tax Identification Documentation</span>
+                        <span class="proc-held-badge">HELD (On Request)</span>
+                    </div>
+                    <div class="proc-check-item">
+                        <span class="proc-check-title">Portfolio Appendix & Evidence Pack</span>
+                        <span class="proc-held-badge">HELD (Live References)</span>
+                    </div>
+                    <div class="proc-check-item">
+                        <span class="proc-check-title">Tax Clearance Certificate</span>
+                        <span style="color:#FBBF24; font-size:0.75rem; font-weight:600;">PER SUBMISSION</span>
+                    </div>
+                    <div class="proc-check-item">
+                        <span class="proc-check-title">Technical & Commercial Proposals</span>
+                        <span style="color:#60A5FA; font-size:0.75rem; font-weight:600;">PER TENDER / RFP</span>
+                    </div>
+
+                    <div style="margin-top:20px; padding:14px; background:rgba(255,255,255,0.02); border-radius:8px; border:1px solid var(--border-subtle); font-size:0.8rem; color:var(--text-secondary);">
+                        <strong>Submission Principles:</strong> Only documents that are valid, applicable, and available are submitted for any opportunity. Legal particulars are reproduced exactly as they appear on CAC documentation.
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7 Corporate Values Grid -->
+            <div class="section-header" style="margin-bottom:30px;">
+                <h3 style="font-size:1.8rem;">The Seven Core Values Guiding Our Work</h3>
+            </div>
+            <div class="corporate-values-grid">
+                <div class="glass-card value-card">
+                    <div class="value-card-num">01</div>
+                    <h4>Innovation</h4>
+                    <p>Exploring and applying appropriate technologies to develop practical solutions for evolving business needs.</p>
+                </div>
+                <div class="glass-card value-card">
+                    <div class="value-card-num">02</div>
+                    <h4>Business Value</h4>
+                    <p>Seeking solutions that align with operational objectives and measurable economic requirements.</p>
+                </div>
+                <div class="glass-card value-card">
+                    <div class="value-card-num">03</div>
+                    <h4>Professionalism</h4>
+                    <p>Emphasising clear communication, defined deliverables, responsible project execution, and documentation.</p>
+                </div>
+                <div class="glass-card value-card">
+                    <div class="value-card-num">04</div>
+                    <h4>Integrity</h4>
+                    <p>Representing capabilities, project history, and product maturity honestly without exaggeration.</p>
+                </div>
+                <div class="glass-card value-card">
+                    <div class="value-card-num">05</div>
+                    <h4>Client Focus</h4>
+                    <p>Recognising individual operational realities and designing solutions suited to specific circumstances.</p>
+                </div>
+                <div class="glass-card value-card">
+                    <div class="value-card-num">06</div>
+                    <h4>Continuous Improvement</h4>
+                    <p>Supporting ongoing learning, experimentation, product development, and capability enhancement.</p>
+                </div>
+                <div class="glass-card value-card" style="grid-column: span 2;">
+                    <div class="value-card-num">07</div>
+                    <h4>Accessibility</h4>
+                    <p>Making useful digital tools accessible to businesses and institutions with different levels of technical capacity — meeting organisations where they are, and building capability over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Section 8: Founder Profile & Leadership
+       ========================================================================== -->
+    <section id="leadership" class="section" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="founder-box">
+                <div class="founder-avatar-col">
+                    <div class="founder-monogram">WB</div>
+                    <div class="founder-title-badge">Founder & Lead Solutions Architect</div>
+                    <h4 style="font-size:1.2rem; margin-top:4px;">Wada Oluwapelumi Benedict</h4>
+                    <p style="font-size:0.8rem; color:var(--text-muted); margin-top:4px;">Ughelli North, Delta State, Nigeria</p>
+                </div>
+
+                <div class="founder-info-col">
+                    <div class="section-badge">Leadership Profile</div>
+                    <h3>The Person Behind the Practice</h3>
+                    <div class="founder-subtitle">
+                        A Nigerian technology entrepreneur whose work spans website development, digital solutions, technology product planning, and project management.
+                    </div>
+                    <p class="founder-bio">
+                        Wada Oluwapelumi Benedict began building professional experience in website development and digital services before formal registration in February 2026. His experience includes approximately seven years of freelance website-design work, with a focus on WordPress and custom development, alongside wider interests in web applications, SaaS, AI, and workflow automation.
+                    </p>
+
+                    <div class="founder-credentials-grid">
+                        <div class="cred-box">
+                            <h5>Technical & Delivery Foundation</h5>
+                            <p>Website design and development · WordPress and custom CMS architectures · PMI-aligned Agile and Waterfall project methodologies · International Association of Project Managers membership affiliation.</p>
+                        </div>
+                        <div class="cred-box">
+                            <h5>Industrial Project Exposure</h5>
+                            <p>Project history includes exposure to Obiafu 2 Wellhead Fire Intervention; OML 13 for SEEPCO; and structural sheds/platform installation at GPP-2 in Kwale, Delta State.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Section 9: Interactive Project Scoping & Quote Estimator (RFP Engine)
+       ========================================================================== -->
+    <section id="scope-estimator" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Interactive Project Planner</div>
+                <h2>Interactive Project Scoping & <span class="gradient-text">Proposal Generator</span></h2>
+                <p>
+                    Configure your requirements below to instantly generate a structured project brief and connect directly with our engineering consultants.
+                </p>
+            </div>
+
+            <div class="estimator-container">
+                <!-- Step 1: Select Service -->
+                <div class="estimator-step-block">
+                    <div class="estimator-step-title">
+                        <span class="badge-num">1</span> Select Desired Service Area
+                    </div>
+                    <div class="estimator-options-grid">
+                        <button class="estimator-option-btn est-service-btn selected" data-value="Corporate Website & Digital Presence">
+                            <span class="opt-icon">🌐</span>
+                            <span class="opt-name">Corporate Website</span>
+                            <span class="opt-desc">Design, CMS, Lead Gen</span>
+                        </button>
+                        <button class="estimator-option-btn est-service-btn" data-value="Web Application & Client Portal">
+                            <span class="opt-icon">💻</span>
+                            <span class="opt-name">Web Application</span>
+                            <span class="opt-desc">Dashboards & Portals</span>
+                        </button>
+                        <button class="estimator-option-btn est-service-btn" data-value="Workflow Automation & Integration">
+                            <span class="opt-icon">⚙️</span>
+                            <span class="opt-name">Workflow Automation</span>
+                            <span class="opt-desc">Forms, Approvals, Alerts</span>
+                        </button>
+                        <button class="estimator-option-btn est-service-btn" data-value="SaaS MVP & Proprietary Platform">
+                            <span class="opt-icon">🚀</span>
+                            <span class="opt-name">SaaS Product MVP</span>
+                            <span class="opt-desc">Multi-Tenant Platform</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Select Industry -->
+                <div class="estimator-step-block">
+                    <div class="estimator-step-title">
+                        <span class="badge-num">2</span> Select Industry Context
+                    </div>
+                    <div class="estimator-options-grid">
+                        <button class="estimator-option-btn est-industry-btn selected" data-value="Energy, Oil & Gas">
+                            <span class="opt-icon">🛢️</span>
+                            <span class="opt-name">Oil & Gas / Energy</span>
+                        </button>
+                        <button class="estimator-option-btn est-industry-btn" data-value="Engineering & Industrial">
+                            <span class="opt-icon">⚙️</span>
+                            <span class="opt-name">Engineering / Industrial</span>
+                        </button>
+                        <button class="estimator-option-btn est-industry-btn" data-value="Retail, Fashion & E-Commerce">
+                            <span class="opt-icon">🛍️</span>
+                            <span class="opt-name">Retail & E-Commerce</span>
+                        </button>
+                        <button class="estimator-option-btn est-industry-btn" data-value="Institutional / Enterprise / Startup">
+                            <span class="opt-icon">🏢</span>
+                            <span class="opt-name">Institutional / Startup</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Select Timeline -->
+                <div class="estimator-step-block">
+                    <div class="estimator-step-title">
+                        <span class="badge-num">3</span> Target Delivery Timeline
+                    </div>
+                    <div class="estimator-options-grid">
+                        <button class="estimator-option-btn est-timeline-btn" data-value="Rapid Delivery (2 - 3 Weeks)">
+                            <span class="opt-icon">⚡</span>
+                            <span class="opt-name">Rapid Delivery</span>
+                            <span class="opt-desc">2 - 3 Weeks</span>
+                        </button>
+                        <button class="estimator-option-btn est-timeline-btn selected" data-value="Standard Delivery (4 - 6 Weeks)">
+                            <span class="opt-icon">📅</span>
+                            <span class="opt-name">Standard Delivery</span>
+                            <span class="opt-desc">4 - 6 Weeks</span>
+                        </button>
+                        <button class="estimator-option-btn est-timeline-btn" data-value="Comprehensive (8 - 12 Weeks)">
+                            <span class="opt-icon">🏗️</span>
+                            <span class="opt-name">Comprehensive</span>
+                            <span class="opt-desc">8 - 12 Weeks</span>
+                        </button>
+                        <button class="estimator-option-btn est-timeline-btn" data-value="Phased Long-Term Roadmap">
+                            <span class="opt-icon">🔄</span>
+                            <span class="opt-name">Phased Roadmap</span>
+                            <span class="opt-desc">Ongoing SLA Support</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Problem Statement -->
+                <div class="estimator-step-block">
+                    <div class="estimator-step-title">
+                        <span class="badge-num">4</span> Project Scope & Key Objectives
+                    </div>
+                    <textarea class="estimator-text-area" id="estimatorProjectDesc" placeholder="Briefly describe your current business bottleneck or desired digital capability (e.g. We need to digitize our inventory tracking and launch a client portal for automated orders)..."></textarea>
+                </div>
+
+                <!-- Step 5: Live Brief Output & Dispatch -->
+                <div class="estimator-summary-box">
+                    <div class="estimator-summary-header">
+                        <h4>Structured Project Scope Brief</h4>
+                        <span style="font-size:0.75rem; color:var(--cyan-glow);">Generated for BennieChat Scoping Office</span>
+                    </div>
+
+                    <div class="estimator-brief-preview" id="estimatorBriefOutput">
+                        Generating brief...
+                    </div>
+
+                    <div class="estimator-dispatch-actions">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" id="estimatorWhatsAppBtn">
+                            💬 Send Scope via WhatsApp Direct (+234 810 181 1993)
+                        </a>
+                        <a href="#" class="btn btn-secondary" id="estimatorEmailBtn">
+                            ✉️ Dispatch Scope via Official Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Section 10: Official Contact & Corporate Details
+       ========================================================================== -->
+    <section id="contact" class="section" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Corporate Inquiries</div>
+                <h2>Start a <span class="gradient-text">Conversation</span></h2>
+                <p>
+                    BennieChat TechWealth Solutions welcomes enquiries relating to suitable technology, software development, website development, digital transformation, and digital product engagements.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card-list">
+                    <div class="contact-channel-card">
+                        <div class="channel-icon">📱</div>
+                        <div class="channel-info">
+                            <h5>Telephone / WhatsApp</h5>
+                            <a href="https://wa.me/2348101811993" target="_blank" rel="noopener noreferrer">+234 810 181 1993</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-channel-card">
+                        <div class="channel-icon">✉️</div>
+                        <div class="channel-info">
+                            <h5>Corporate Email</h5>
+                            <a href="mailto:benniechatsystems@gmail.com">benniechatsystems@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-channel-card">
+                        <div class="channel-icon">🌐</div>
+                        <div class="channel-info">
+                            <h5>Official Web Platform</h5>
+                            <a href="https://www.benniechat.onrender.com" target="_blank" rel="noopener noreferrer">www.benniechat.onrender.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-channel-card">
+                        <div class="channel-icon">💻</div>
+                        <div class="channel-info">
+                            <h5>GitHub Technical Portfolio</h5>
+                            <a href="https://www.github.com/benniechat" target="_blank" rel="noopener noreferrer">github.com/benniechat</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-box">
+                    <div>
+                        <h4>Operating Headquarters & Model</h4>
+                        <p style="color:#CBD5E1; font-size:0.95rem;">
+                            BennieChat operates as a <strong>remote-first</strong> technology and digital solutions provider, based in Ughelli North, Delta State, Nigeria, and collaborating with clients across Nigeria and globally.
+                        </p>
+
+                        <div class="location-map-graphic">
+                            <div class="map-pin">📍</div>
+                            <strong style="color:#FFFFFF; font-size:1.05rem;">Ughelli North, Delta State, Nigeria</strong>
+                            <div class="location-coords">LAT: 5.5002° N · LON: 5.9995° E</div>
+                        </div>
+                    </div>
+
+                    <div style="font-size:0.85rem; color:var(--text-muted); border-top:1px solid var(--border-subtle); padding-top:14px;">
+                        <strong>Corporate Declaration:</strong> CAC Business Name Reg. 9373701. Tax identification and compliance documentation maintained for procurement.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
     <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="assets/BennieChatLogo.jpeg" alt="BennieChat Logo">
+            <div class="footer-top-grid">
+                <div class="footer-about">
+                    <div class="brand-logo">
+                        <img src="assets/benniechat-logo.png" alt="BennieChat Logo" class="brand-logo-img">
+                        <span class="brand-name">BennieChat <span>TechWealth</span></span>
                     </div>
-                    <p>Technology & Digital Solutions for Businesses, Organizations and Entrepreneurs.</p>
+                    <p>
+                        A Nigerian technology and software development company helping organizations build stronger digital operations through websites, software, digital platforms, automation, and practical innovation.
+                    </p>
+                    <div style="margin-top:16px; font-size:0.85rem; color:var(--cyan-glow); font-family:'JetBrains Mono';">
+                        CAC REG. NO. 9373701
+                    </div>
                 </div>
+
                 <div class="footer-col">
-                    <h5>Services</h5>
+                    <h5>Key Services</h5>
                     <ul>
-                        <li><a href="#services">Web Development</a></li>
-                        <li><a href="#services">Software & SaaS</a></li>
-                        <li><a href="#services">AI Solutions</a></li>
-                        <li><a href="#services">Automation</a></li>
+                        <li><a href="#capabilities">Website Development</a></li>
+                        <li><a href="#capabilities">Software & Web Apps</a></li>
+                        <li><a href="#capabilities">Workflow Automation</a></li>
+                        <li><a href="#capabilities">SaaS & Digital Products</a></li>
+                        <li><a href="#capabilities">AI & Data Solutions</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-col">
-                    <h5>Company</h5>
+                    <h5>Corporate</h5>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#promise">Our Approach</a></li>
-                        <li><a href="#method">Our Method</a></li>
-                        <li><a href="#cta">Contact</a></li>
+                        <li><a href="#economics">Economics Engine</a></li>
+                        <li><a href="#methodology">5-Phase Delivery</a></li>
+                        <li><a href="#innovation">Venture Lab</a></li>
+                        <li><a href="#portfolio">Verifiable Portfolio</a></li>
+                        <li><a href="#procurement" class="open-cac-modal">CAC Verification</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-col">
-                    <h5>Contact</h5>
+                    <h5>Direct Contact</h5>
                     <ul>
-                        <li>Email: <a href="mailto:info@benniechat.com">info@benniechat.com</a></li>
-                        <li>Phone: <a href="tel:+10000000000">+1 (800) 555-0199</a></li>
+                        <li><a href="https://wa.me/2348101811993" target="_blank" rel="noopener noreferrer">WhatsApp: +234 810 181 1993</a></li>
+                        <li><a href="mailto:benniechatsystems@gmail.com">benniechatsystems@gmail.com</a></li>
+                        <li><a href="https://github.com/benniechat" target="_blank" rel="noopener noreferrer">GitHub / Benniechat</a></li>
+                        <li>Ughelli North, Delta State, Nigeria</li>
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>© 2026 BennieChat TechWealth Solutions. All Rights Reserved.</p>
+                <div>
+                    © 2026 BennieChat TechWealth Solutions. CAC Business Name Reg. 9373701. All Rights Reserved.
+                </div>
+                <div style="display:flex; gap:20px;">
+                    <a href="#procurement" style="color:var(--text-muted);">Governance & Procurement</a>
+                    <a href="#hero" style="color:var(--cyan-glow);">Back to Top ↑</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Modular Script -->
+    <!-- ==========================================================================
+       Interactive Modals
+       ========================================================================== -->
+    <!-- CAC Certificate Modal -->
+    <div class="modal-overlay" id="cacModal">
+        <div class="modal-window">
+            <button class="modal-close-btn" aria-label="Close Modal">✕</button>
+            <div style="margin-bottom:20px;">
+                <span class="section-badge gold">Official Registration Record</span>
+                <h3 style="font-size:1.6rem; margin-top:8px;">Corporate Affairs Commission (CAC) Certificate</h3>
+                <p style="font-size:0.9rem; color:var(--text-secondary);">
+                    Federal Republic of Nigeria · Companies and Allied Matters Act 2020 · Registration No. 9373701
+                </p>
+            </div>
+            <img src="assets/cac-cert.png" alt="Official CAC Certificate of Registration" class="modal-cert-image">
+            <div style="margin-top:20px; font-size:0.85rem; color:var(--text-muted); text-align:center;">
+                Certified registration given at Abuja on 26 February 2026. Maintained in corporate records for institutional procurement.
+            </div>
+        </div>
+    </div>
+
+    <!-- Capability Specifications Modal -->
+    <div class="modal-overlay" id="capabilityModal">
+        <div class="modal-window">
+            <button class="modal-close-btn" aria-label="Close Modal">✕</button>
+            <div style="margin-bottom:16px;">
+                <span class="cap-num" id="modalCapNum">SERVICE 01</span>
+                <h3 style="font-size:1.8rem; margin-top:10px;" id="modalCapTitle">Service Title</h3>
+                <span class="cap-status-pill established" id="modalCapBadge" style="margin-top:8px; display:inline-block;">Established</span>
+            </div>
+            <p id="modalCapDesc" style="color:#CBD5E1; margin-bottom:20px; font-size:0.95rem;"></p>
+
+            <div style="background:rgba(255,255,255,0.03); border-radius:12px; padding:20px; border:1px solid var(--border-subtle); margin-bottom:20px;">
+                <h5 style="color:var(--cyan-glow); font-size:0.85rem; text-transform:uppercase; margin-bottom:12px;">Detailed Potential Deliverables</h5>
+                <ul id="modalCapDeliverables" style="font-size:0.875rem; color:var(--text-secondary); line-height:1.7;"></ul>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;">
+                <div style="background:rgba(8,14,28,0.7); padding:14px; border-radius:8px; border:1px solid var(--border-subtle);">
+                    <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Architecture & Tools</div>
+                    <div id="modalCapTech" style="font-size:0.85rem; color:var(--text-primary); font-weight:600; margin-top:4px;"></div>
+                </div>
+                <div style="background:rgba(8,14,28,0.7); padding:14px; border-radius:8px; border:1px solid var(--border-subtle);">
+                    <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Evidence & Reference</div>
+                    <div id="modalCapEvidence" style="font-size:0.85rem; color:var(--teal-accent); font-weight:600; margin-top:4px;"></div>
+                </div>
+            </div>
+
+            <a href="#scope-estimator" class="btn btn-primary" style="width:100%;" onclick="document.getElementById('capabilityModal').classList.remove('active');">
+                Scope This Service Area In RFP Estimator →
+            </a>
+        </div>
+    </div>
+
+    <!-- Proprietary Venture Architecture Modal -->
+    <div class="modal-overlay" id="ventureModal">
+        <div class="modal-window">
+            <button class="modal-close-btn" aria-label="Close Modal">✕</button>
+            <div style="margin-bottom:16px;">
+                <span class="section-badge purple" id="modalVentureCategory">Digital Media</span>
+                <h3 style="font-size:1.8rem; margin-top:8px;" id="modalVentureTitle">Venture Name</h3>
+                <span class="venture-badge" id="modalVentureBadge" style="margin-top:8px;">Concept</span>
+            </div>
+            <p id="modalVentureSummary" style="color:#CBD5E1; margin-bottom:20px; font-size:0.95rem; line-height:1.6;"></p>
+
+            <div style="background:rgba(139,92,246,0.06); border-radius:12px; padding:20px; border:1px solid var(--border-glow-purple); margin-bottom:20px;">
+                <h5 style="color:#C4B5FD; font-size:0.85rem; text-transform:uppercase; margin-bottom:12px;">Planned Core Features & Functional Architecture</h5>
+                <ul id="modalVentureFeatures" style="font-size:0.875rem; color:var(--text-secondary); line-height:1.7;"></ul>
+            </div>
+
+            <div style="background:rgba(0,0,0,0.3); border-left:3px solid var(--purple-glow); padding:14px; border-radius:6px; font-size:0.825rem; color:var(--text-muted);">
+                <strong>Status Note:</strong> <span id="modalVentureStatusNote"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       Floating Action Dock
+       ========================================================================== -->
+    <div class="floating-dock">
+        <a href="https://wa.me/2348101811993" target="_blank" rel="noopener noreferrer" class="dock-whatsapp-btn" title="Chat on WhatsApp (+234 810 181 1993)">
+            💬
+        </a>
+        <button class="back-to-top-btn" id="backToTopBtn" title="Back to top">
+            ↑
+        </button>
+    </div>
+
+    <!-- Application Logic Script -->
     <script src="js/main.js"></script>
 </body>
 </html>
