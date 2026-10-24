@@ -2711,4 +2711,33 @@ footer {
   .footer-top-grid {
     grid-template-columns: 1fr;
   }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .brand-logo-img {
+    height: 36px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 20px;
+  }
+  .brand-name {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 0.9rem;
+  }
+  .brand-tagline {
+    font-size: 0.58rem;
+  }
+  .top-trust-bar {
+    display: none;
+  }
 }
