@@ -7,6 +7,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initHeroCanvas();
+    initHeroRefTabs();
     initScrollHeader();
     initAnimatedCounters();
     initRoiSimulator();
@@ -14,13 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
     initPipelineLifecycle();
     initIndustryCockpit();
     initVentureModals();
+    initFounderCarousel();
     initProjectEstimator();
     initCacModal();
     initBackToTop();
 });
 
 /* ==========================================================================
-   Navigation & Mobile Toggle
+   Clean Navigation & Mobile Toggle
    ========================================================================== */
 function initNavigation() {
     const menuToggle = document.getElementById('menuToggle');
@@ -47,8 +49,9 @@ function initNavigation() {
 
 function initScrollHeader() {
     const header = document.querySelector('header');
+    if (!header) return;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 40) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
@@ -73,7 +76,7 @@ function initHeroCanvas() {
     });
 
     const particles = [];
-    const particleCount = Math.min(Math.floor(width / 18), 75);
+    const particleCount = Math.min(Math.floor(width / 20), 65);
 
     class Particle {
         constructor() {
@@ -134,7 +137,7 @@ function initHeroCanvas() {
 
                 if (dist < 110) {
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(0, 242, 254, ${0.2 * (1 - dist / 110)})`;
+                    ctx.strokeStyle = `rgba(0, 242, 254, ${0.18 * (1 - dist / 110)})`;
                     ctx.lineWidth = 0.7;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
@@ -163,6 +166,30 @@ function initHeroCanvas() {
     }
 
     animate();
+}
+
+/* ==========================================================================
+   Hero Reference Showcase Tabs (Explaining Deliverables visually)
+   ========================================================================== */
+function initHeroRefTabs() {
+    const tabBtns = document.querySelectorAll('.hero-ref-tab-btn');
+    const panels = document.querySelectorAll('.hero-ref-panel');
+
+    if (!tabBtns.length || !panels.length) return;
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            panels.forEach(p => p.classList.remove('active'));
+
+            btn.classList.add('active');
+            const targetId = btn.getAttribute('data-target');
+            const targetPanel = document.getElementById(targetId);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+        });
+    });
 }
 
 /* ==========================================================================
@@ -329,7 +356,7 @@ const CAPABILITY_DATABASE = {
             'Product roadmap planning, technical backlog sequencing, and MVP delivery'
         ],
         techStack: 'Next.js, Tailwind/Vanilla CSS, Supabase, Stripe Billing, Node.js microservices, Redis',
-        evidence: 'GetiDone, ROSCA AI™, HotelShield™ internal venture developments'
+        evidence: 'GetiDone, ROSCA AI™, HotelShield™, Zonita TV internal venture developments'
     },
     'cap-05': {
         title: 'Digital Transformation & Process Improvement',
@@ -464,7 +491,7 @@ function initCapabilityExplorer() {
 
     // Modal Trigger Buttons
     document.querySelectorAll('.cap-view-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
+        btn.addEventListener('click', () => {
             const capId = btn.getAttribute('data-cap');
             openCapabilityModal(capId);
         });
@@ -640,7 +667,7 @@ const INDUSTRY_DATABASE = {
         title: 'Technology Startups & Entrepreneurs',
         challenges: 'Navigating technical debt, prioritizing MVP feature backlogs, high development agency costs, and difficulty turning a raw idea into a working first release.',
         solution: 'Agile MVP planning and development, SaaS product architecture, user dashboards, automated Stripe/Paystack billing integration, and rapid market validation.',
-        reference: 'Internal venture methodologies developed across GetiDone, ROSCA AI™, and Zoniva TV.'
+        reference: 'Internal venture methodologies developed across GetiDone, ROSCA AI™, and Zonita TV.'
     }
 };
 
@@ -671,11 +698,11 @@ function initIndustryCockpit() {
 }
 
 /* ==========================================================================
-   Proprietary Innovation Lab Venture Modals
+   Proprietary Innovation Lab Venture Modals (Corrected to Zonita TV)
    ========================================================================== */
 const VENTURE_DATABASE = {
-    'zoniva': {
-        title: 'Zoniva TV',
+    'zonita': {
+        title: 'Zonita TV',
         category: 'Digital Media · Television-Platform Initiative',
         status: 'Concept & Functional Direction',
         summary: 'A digital television-platform initiative exploring a continuous, channel-based viewing experience using content originating from YouTube. Designed to mimic the familiarity of conventional television where viewers select a channel and encounter a continuous sequence of curated programmes rather than picking videos one by one.',
@@ -685,7 +712,7 @@ const VENTURE_DATABASE = {
             'Embedding compatibility and platform rights governance',
             'Distinguished channel identity and immersive lean-back viewing flow'
         ],
-        statusNote: 'Available project history establishes the concept and functional direction. Implementation stage (prototype/deployed product) is confirmed before any formal proposal. Spelling preserved per source records.'
+        statusNote: 'Official spelling confirmed as Zonita TV. Available project history establishes the concept and functional direction. Implementation stage (prototype/deployed product) is confirmed before any formal proposal.'
     },
     'getidone': {
         title: 'GetiDone',
@@ -788,6 +815,84 @@ function initVentureModals() {
             modal.classList.add('active');
         });
     });
+}
+
+/* ==========================================================================
+   Founder Portrait Carousel in Leadership Profile
+   ========================================================================== */
+function initFounderCarousel() {
+    const track = document.getElementById('founderCarouselTrack');
+    const prevBtn = document.getElementById('founderPrevBtn');
+    const nextBtn = document.getElementById('founderNextBtn');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    if (!track || !slides.length) return;
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    let autoPlayTimer = null;
+
+    function goToSlide(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentIndex = index;
+
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        dots.forEach((dot, i) => {
+            if (i === currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            goToSlide(currentIndex - 1);
+            resetAutoplay();
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            goToSlide(currentIndex + 1);
+            resetAutoplay();
+        });
+    }
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            goToSlide(i);
+            resetAutoplay();
+        });
+    });
+
+    function startAutoplay() {
+        autoPlayTimer = setInterval(() => {
+            goToSlide(currentIndex + 1);
+        }, 5000);
+    }
+
+    function resetAutoplay() {
+        if (autoPlayTimer) clearInterval(autoPlayTimer);
+        startAutoplay();
+    }
+
+    // Pause on hover
+    const carouselContainer = document.querySelector('.founder-carousel');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', () => {
+            if (autoPlayTimer) clearInterval(autoPlayTimer);
+        });
+        carouselContainer.addEventListener('mouseleave', () => {
+            startAutoplay();
+        });
+    }
+
+    startAutoplay();
 }
 
 /* ==========================================================================
