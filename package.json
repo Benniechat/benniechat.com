@@ -1,0 +1,17 @@
+{
+  "name": "benniechat",
+  "version": "1.0.0",
+  "description": "BennieChat TechWealth Solutions - Official Website & Platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y serve -s . -l $PORT",
+    "build": "echo 'Static build complete'"
+  },
+  "keywords": [
+    "benniechat",
+    "techwealth",
+    "software-engineering"
+  ],
+  "author": "BennieChat TechWealth Solutions",
+  "license": "ISC"
+}
