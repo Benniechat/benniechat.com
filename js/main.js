@@ -93,12 +93,12 @@ function initHeroCanvas() {
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-    let width = canvas.width = window.innerWidth;
-    let height = canvas.height = canvas.parentElement.offsetHeight;
+    let width = canvas.width = canvas.parentElement ? canvas.parentElement.offsetWidth : window.innerWidth;
+    let height = canvas.height = canvas.parentElement ? canvas.parentElement.offsetHeight : 500;
 
     window.addEventListener('resize', () => {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = canvas.parentElement.offsetHeight;
+        width = canvas.width = canvas.parentElement ? canvas.parentElement.offsetWidth : window.innerWidth;
+        height = canvas.height = canvas.parentElement ? canvas.parentElement.offsetHeight : 500;
     });
 
     const particles = [];
@@ -1024,7 +1024,7 @@ function initProjectEstimator() {
 To: BennieChat TechWealth Solutions (CAC Reg: 9373701)
 Operating Location: Ughelli North, Delta State, Nigeria
 
---------------------------------------------------
+------------------------------
 1. SERVICE REQUIRED: ${selectedService}
 2. INDUSTRY CONTEXT: ${selectedIndustry}
 3. TARGET TIMELINE:  ${selectedTimeline}
@@ -1034,7 +1034,7 @@ Operating Location: Ughelli North, Delta State, Nigeria
 Delivery Model: Remote-First Technology Provider
 Contact Email: benniechatsystems@gmail.com
 Phone/WhatsApp: +234 810 181 1993
---------------------------------------------------
+------------------------------
 Please review and advise on initial scoping, milestone breakdown, and formal proposal.`;
 
         if (previewEl) {

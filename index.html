@@ -1040,7 +1040,7 @@
                 <!-- CAC Certificate Preview Card -->
                 <div class="cac-preview-card">
                     <div>
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                        <div class="cac-header-row">
                             <h4 style="font-size:1.15rem;">CAC Registration Certificate</h4>
                             <span class="proc-held-badge">CERTIFIED HELD</span>
                         </div>
@@ -1500,9 +1500,9 @@
                 <div>
                     © 2026 BennieChat TechWealth Solutions. CAC Business Name Reg. 9373701. All Rights Reserved.
                 </div>
-                <div style="display:flex; gap:20px;">
-                    <a href="#procurement" style="color:var(--text-muted);">Governance & Procurement</a>
-                    <a href="#hero" style="color:var(--cyan-glow);">Back to Top ↑</a>
+                <div class="footer-bottom-links">
+                    <a href="#procurement">Governance & Procurement</a>
+                    <a href="#hero" class="back-to-top-link">Back to Top ↑</a>
                 </div>
             </div>
         </div>
@@ -1545,14 +1545,14 @@
                 <ul id="modalCapDeliverables" style="font-size:0.85rem; color:var(--text-secondary); line-height:1.7;"></ul>
             </div>
 
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:22px;">
-                <div style="background:rgba(6,10,22,0.7); padding:12px; border-radius:8px; border:1px solid var(--border-subtle);">
-                    <div style="font-size:0.725rem; color:var(--text-muted); text-transform:uppercase;">Architecture & Tools</div>
-                    <div id="modalCapTech" style="font-size:0.825rem; color:var(--text-primary); font-weight:600; margin-top:3px;"></div>
+            <div class="modal-cap-grid">
+                <div class="modal-cap-meta-box">
+                    <div class="modal-cap-meta-label">Architecture & Tools</div>
+                    <div id="modalCapTech" class="modal-cap-meta-value"></div>
                 </div>
-                <div style="background:rgba(6,10,22,0.7); padding:12px; border-radius:8px; border:1px solid var(--border-subtle);">
-                    <div style="font-size:0.725rem; color:var(--text-muted); text-transform:uppercase;">Evidence & Reference</div>
-                    <div id="modalCapEvidence" style="font-size:0.825rem; color:var(--teal-accent); font-weight:600; margin-top:3px;"></div>
+                <div class="modal-cap-meta-box">
+                    <div class="modal-cap-meta-label">Evidence & Reference</div>
+                    <div id="modalCapEvidence" class="modal-cap-meta-value highlight"></div>
                 </div>
             </div>
 

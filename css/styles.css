@@ -76,6 +76,7 @@ html {
   color-scheme: dark;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -1832,6 +1833,15 @@ nav {
   opacity: 1;
 }
 
+.cac-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
 .cac-data-table {
   width: 100%;
   border-collapse: collapse;
@@ -2240,6 +2250,11 @@ nav {
   font-size: 0.825rem;
   color: #A5F3FC;
   white-space: pre-wrap;
+  overflow-x: auto;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  max-width: 100%;
+  box-sizing: border-box;
   margin-bottom: 18px;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -2306,6 +2321,8 @@ nav {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-primary);
+  overflow-wrap: anywhere;
+  word-break: break-all;
 }
 
 .channel-info a:hover {
@@ -2407,6 +2424,8 @@ footer {
 .footer-col ul li a {
   color: var(--text-secondary);
   font-size: 0.85rem;
+  overflow-wrap: anywhere;
+  word-break: break-all;
 }
 
 .footer-col ul li a:hover {
@@ -2423,6 +2442,28 @@ footer {
   color: var(--text-muted);
   flex-wrap: wrap;
   gap: 14px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  color: var(--text-muted);
+  font-size: 0.825rem;
+  transition: color var(--duration-fast);
+}
+
+.footer-bottom-links a:hover {
+  color: var(--cyan-glow);
+}
+
+.footer-bottom-links a.back-to-top-link {
+  color: var(--cyan-glow);
+  font-weight: 600;
 }
 
 /* ==========================================================================
@@ -2497,6 +2538,40 @@ footer {
   border-radius: var(--radius-md);
   border: 1px solid var(--border-medium);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-cap-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.modal-cap-meta-box {
+  background: rgba(6, 10, 22, 0.7);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+}
+
+.modal-cap-meta-label {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.modal-cap-meta-value {
+  font-size: 0.825rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-top: 3px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.modal-cap-meta-value.highlight {
+  color: var(--teal-accent);
 }
 
 /* ==========================================================================
@@ -2603,6 +2678,17 @@ footer {
     max-width: 620px;
     margin: 0 auto;
     width: 100%;
+    position: relative;
+  }
+
+  .floating-badge.badge-top-right {
+    top: 8px;
+    right: 8px;
+  }
+
+  .floating-badge.badge-bottom-left {
+    bottom: 8px;
+    left: 8px;
   }
 
   .capabilities-grid,
@@ -3001,6 +3087,17 @@ footer {
     text-align: center;
     gap: 8px;
   }
+
+  .modal-cap-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .ind-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }
 
 /* --- 6. Extra Small Mobile Phones (max-width: 480px) --- */
@@ -3094,9 +3191,75 @@ footer {
     padding: 18px 14px;
   }
 
+  .btn {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-align: center;
+    line-height: 1.35;
+  }
+
+  .proc-check-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cac-data-table,
+  .cac-data-table tbody,
+  .cac-data-table tr,
   .cac-data-table td {
-    padding: 7px 0;
-    font-size: 0.75rem;
+    display: block;
+    width: 100% !important;
+  }
+
+  .cac-data-table tr {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .cac-data-table td:first-child {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0 0 2px 0;
+  }
+
+  .cac-data-table td:last-child {
+    text-align: left !important;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 0;
+  }
+
+  .roi-card-primary {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 14px;
+  }
+
+  .modal-overlay {
+    padding: 12px 8px;
+  }
+
+  .modal-window {
+    padding: 20px 14px;
+    max-height: 90vh;
+  }
+
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    gap: 14px;
   }
 
   .founder-box {
@@ -3159,16 +3322,24 @@ footer {
   }
 
   .hero-content h1 {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
   }
 
   .btn {
-    padding: 10px 16px;
-    font-size: 0.85rem;
+    padding: 10px 14px;
+    font-size: 0.825rem;
   }
 
   .section-badge {
     font-size: 0.7rem;
     padding: 4px 10px;
+  }
+
+  .modal-window {
+    padding: 18px 12px;
+  }
+
+  .modal-window h3 {
+    font-size: 1.2rem !important;
   }
 }
