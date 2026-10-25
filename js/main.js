@@ -29,7 +29,8 @@ function initNavigation() {
     const navLinks = document.getElementById('navLinks');
 
     if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             navLinks.classList.toggle('active');
             const isOpen = navLinks.classList.contains('active');
             menuToggle.innerHTML = isOpen ? '✕' : '☰';
@@ -41,9 +42,34 @@ function initNavigation() {
         link.addEventListener('click', () => {
             if (navLinks && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
-                if (menuToggle) menuToggle.innerHTML = '☰';
+                if (menuToggle) {
+                    menuToggle.innerHTML = '☰';
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
             }
         });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+        if (navLinks && navLinks.classList.contains('active')) {
+            if (!navLinks.contains(e.target) && menuToggle && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '☰';
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            if (menuToggle) {
+                menuToggle.innerHTML = '☰';
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        }
     });
 }
 
@@ -890,6 +916,28 @@ function initFounderCarousel() {
         carouselContainer.addEventListener('mouseleave', () => {
             startAutoplay();
         });
+
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            if (autoPlayTimer) clearInterval(autoPlayTimer);
+        }, { passive: true });
+
+        carouselContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diffX = touchStartX - touchEndX;
+            if (Math.abs(diffX) > 40) {
+                if (diffX > 0) {
+                    goToSlide(currentIndex + 1);
+                } else {
+                    goToSlide(currentIndex - 1);
+                }
+            }
+            startAutoplay();
+        }, { passive: true });
     }
 
     startAutoplay();
