@@ -2576,6 +2576,25 @@ footer {
 }
 
 /* ==========================================================================
+   Stitch Mobile Navigation Components (Desktop Defaults - Hidden)
+   ========================================================================== */
+.mobile-brand-rc-badge,
+.mobile-quick-dock,
+.mobile-bottom-nav {
+  display: none !important;
+}
+
+.brand-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-name-sub {
+  display: inline;
+}
+
+/* ==========================================================================
    Floating Action Dock
    ========================================================================== */
 .floating-dock {
@@ -2834,6 +2853,293 @@ footer {
 
 /* --- 4. Medium Tablets & Mobile Landscape (max-width: 768px) --- */
 @media (max-width: 768px) {
+  /* Body spacing for fixed mobile docks */
+  body {
+    padding-bottom: calc(135px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* Hide desktop floating dock on mobile */
+  .floating-dock {
+    display: none !important;
+  }
+
+  /* Stitch Mobile Brand Header & RC Badge */
+  .brand-name-sub {
+    display: none !important;
+  }
+
+  .mobile-brand-rc-badge {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(0, 210, 180, 0.12);
+    color: #00D2B4;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .pulse-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #00D2B4;
+    box-shadow: 0 0 8px #00D2B4;
+    animation: pulseDot 2s infinite ease-in-out;
+  }
+
+  @keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.35; transform: scale(0.8); }
+  }
+
+  /* Stitch Mobile Quick Action Dock (Floating above bottom tab bar) */
+  .mobile-quick-dock {
+    display: flex !important;
+    position: fixed;
+    bottom: calc(62px + env(safe-area-inset-bottom, 0px));
+    left: 0;
+    right: 0;
+    z-index: 998;
+    padding: 0 16px 8px;
+    pointer-events: none;
+  }
+
+  .mobile-quick-dock-inner {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    pointer-events: auto;
+  }
+
+  .mobile-dock-btn {
+    flex: 1;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 12px;
+    font-family: var(--font-sans);
+    font-size: 0.825rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    user-select: none;
+  }
+
+  .mobile-dock-btn:active {
+    transform: scale(0.97);
+  }
+
+  .mobile-dock-wa {
+    background: rgba(14, 23, 38, 0.94);
+    color: #00D2B4;
+    border: 1px solid rgba(0, 210, 180, 0.35);
+    box-shadow: 0 4px 18px rgba(0, 210, 180, 0.18);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .mobile-dock-scope {
+    background: linear-gradient(135deg, #2563EB, #1D4ED8);
+    color: #FFFFFF;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+  }
+
+  .mobile-dock-btn .dock-icon {
+    font-size: 1rem;
+  }
+
+  /* Stitch Mobile Bottom App Tab Navigation Bar */
+  .mobile-bottom-nav {
+    display: flex !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: calc(58px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: rgba(11, 15, 25, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid #1E293B;
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .mobile-nav-tab {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 100%;
+    text-decoration: none;
+    color: #94A3B8;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: color 0.15s ease, background-color 0.15s ease;
+    padding: 4px 0;
+  }
+
+  .mobile-nav-tab .tab-icon {
+    font-size: 1.15rem;
+    line-height: 1;
+    transition: transform 0.15s ease;
+  }
+
+  .mobile-nav-tab.active {
+    color: #00F2FE;
+  }
+
+  .mobile-nav-tab.active .tab-icon {
+    transform: translateY(-2px);
+  }
+
+  .mobile-nav-tab:active {
+    transform: scale(0.94);
+  }
+
+  /* Stitch Deep Obsidian Card Surface Hierarchy */
+  .cockpit-card,
+  .glass-card,
+  .economics-interactive-box,
+  .pipeline-detail-card,
+  .industries-cockpit,
+  .cac-preview-card,
+  .procurement-checklist-card,
+  .founder-box,
+  .estimator-container,
+  .contact-channel-card {
+    background: #0E1726 !important;
+    border: 1px solid #1E293B !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  /* Stitch 2x2 Ergonomic Metric Ribbon */
+  .metrics-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .metric-strip-item {
+    background: #0E1726 !important;
+    border: 1px solid #1E293B !important;
+    border-radius: 14px !important;
+    padding: 14px 12px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    text-align: left !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .metric-strip-item::after {
+    display: none !important;
+  }
+
+  .metric-num {
+    font-size: 1.6rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 3px !important;
+    font-weight: 800 !important;
+    font-family: var(--font-display) !important;
+  }
+
+  .metric-strip-item:nth-child(1) .metric-num { color: #60A5FA !important; }
+  .metric-strip-item:nth-child(2) .metric-num { color: #00F2FE !important; }
+  .metric-strip-item:nth-child(3) .metric-num { color: #00D2B4 !important; }
+  .metric-strip-item:nth-child(4) .metric-num { color: #C084FC !important; }
+
+  .metric-desc {
+    font-size: 0.74rem !important;
+    line-height: 1.3 !important;
+    color: #F8FAFC !important;
+    font-weight: 600 !important;
+  }
+
+  /* Stitch Horizontal Scrolling Service Filter Chips */
+  .capability-filters {
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    padding-bottom: 8px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 8px !important;
+  }
+
+  .capability-filters::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .cap-filter-btn {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    font-size: 0.75rem !important;
+    font-family: var(--font-mono) !important;
+    padding: 6px 14px !important;
+    border-radius: 9999px !important;
+    background: #171B26 !important;
+    color: #94A3B8 !important;
+    border: 1px solid #1E293B !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .cap-filter-btn.active {
+    background: #2563EB !important;
+    color: #FFFFFF !important;
+    border-color: #2563EB !important;
+    box-shadow: 0 0 14px rgba(37, 99, 235, 0.4) !important;
+  }
+
+  /* Stitch Mobile Delivery Stepper */
+  .pipeline-track {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 8px !important;
+    padding: 4px 2px 14px !important;
+  }
+
+  .pipeline-track::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .pipeline-step-node {
+    flex: 0 0 110px !important;
+    min-width: 110px !important;
+    background: #171B26 !important;
+    border: 1px solid #1E293B !important;
+    border-radius: 12px !important;
+    padding: 10px 8px !important;
+  }
+
+  .pipeline-step-node.active {
+    background: #0E1726 !important;
+    border-color: #00F2FE !important;
+    box-shadow: 0 0 14px rgba(0, 242, 254, 0.2) !important;
+  }
+
   #hero {
     padding: 28px 0 20px;
   }
@@ -3151,8 +3457,8 @@ footer {
   }
 
   .metrics-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
   }
 
   .metric-strip-item::after {

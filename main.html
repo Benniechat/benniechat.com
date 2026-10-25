@@ -64,7 +64,10 @@
                     <a href="#hero" class="brand-logo" id="headerLogoLink">
                         <img src="assets/benniechat-logo.png" alt="BennieChat TechWealth Solutions Logo" class="brand-logo-img">
                         <div class="brand-text">
-                            <span class="brand-name">BennieChat <span>TechWealth Solutions</span></span>
+                            <div class="brand-title-row">
+                                <span class="brand-name">BennieChat <span class="brand-name-sub">TechWealth Solutions</span></span>
+                                <span class="mobile-brand-rc-badge"><span class="pulse-dot"></span>RC 9373701</span>
+                            </div>
                             <span class="brand-tagline">Technology That Improves Business</span>
                         </div>
                     </a>
@@ -1581,7 +1584,7 @@
     </div>
 
     <!-- ==========================================================================
-       Floating Action Dock
+       Floating Action Dock (Desktop Only)
        ========================================================================== -->
     <div class="floating-dock">
         <a href="https://wa.me/2348101811993" target="_blank" rel="noopener noreferrer" class="dock-whatsapp-btn" title="Chat on WhatsApp (+234 810 181 1993)">
@@ -1591,6 +1594,44 @@
             ↑
         </button>
     </div>
+
+    <!-- ==========================================================================
+       Stitch Mobile Quick Action Dock (Mobile <= 768px only)
+       ========================================================================== -->
+    <div class="mobile-quick-dock" id="mobileQuickDock">
+        <div class="mobile-quick-dock-inner">
+            <a href="https://wa.link/m4thsq" target="_blank" rel="noopener noreferrer" class="mobile-dock-btn mobile-dock-wa" aria-label="Send WhatsApp RFP">
+                <span class="dock-icon">💬</span>
+                <span>WhatsApp RFP</span>
+            </a>
+            <a href="#scope-estimator" class="mobile-dock-btn mobile-dock-scope" aria-label="Scope Project in RFP Estimator">
+                <span class="dock-icon">⚙️</span>
+                <span>Scope Project</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       Stitch Mobile Bottom App Tab Bar (Mobile <= 768px only)
+       ========================================================================== -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile Bottom Navigation">
+        <a href="#hero" class="mobile-nav-tab active" data-target="hero">
+            <span class="tab-icon">🏠</span>
+            <span class="tab-label">Home</span>
+        </a>
+        <a href="#capabilities" class="mobile-nav-tab" data-target="capabilities">
+            <span class="tab-icon">⚡</span>
+            <span class="tab-label">Services</span>
+        </a>
+        <a href="#portfolio" class="mobile-nav-tab" data-target="portfolio">
+            <span class="tab-icon">🚀</span>
+            <span class="tab-label">Ventures</span>
+        </a>
+        <a href="#procurement" class="mobile-nav-tab" data-target="procurement">
+            <span class="tab-icon">🛡️</span>
+            <span class="tab-label">Trust & CAC</span>
+        </a>
+    </nav>
 
     <!-- Application Logic Script -->
     <script src="js/main.js"></script>
