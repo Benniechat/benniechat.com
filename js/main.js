@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initProjectEstimator();
     initCacModal();
     initBackToTop();
-    initMobileBottomNav();
 });
 
 /* ==========================================================================
@@ -95,11 +94,11 @@ function initHeroCanvas() {
 
     const ctx = canvas.getContext('2d');
     let width = canvas.width = canvas.parentElement ? canvas.parentElement.offsetWidth : window.innerWidth;
-    let height = canvas.height = canvas.parentElement ? canvas.parentElement.offsetHeight : 500;
+    let height = canvas.height = canvas.parentElement ? canvas.parentElement.offsetHeight : 600;
 
     window.addEventListener('resize', () => {
         width = canvas.width = canvas.parentElement ? canvas.parentElement.offsetWidth : window.innerWidth;
-        height = canvas.height = canvas.parentElement ? canvas.parentElement.offsetHeight : 500;
+        height = canvas.height = canvas.parentElement ? canvas.parentElement.offsetHeight : 600;
     });
 
     const particles = [];
@@ -1025,7 +1024,7 @@ function initProjectEstimator() {
 To: BennieChat TechWealth Solutions (CAC Reg: 9373701)
 Operating Location: Ughelli North, Delta State, Nigeria
 
-------------------------------
+--------------------------------------------------
 1. SERVICE REQUIRED: ${selectedService}
 2. INDUSTRY CONTEXT: ${selectedIndustry}
 3. TARGET TIMELINE:  ${selectedTimeline}
@@ -1035,7 +1034,7 @@ Operating Location: Ughelli North, Delta State, Nigeria
 Delivery Model: Remote-First Technology Provider
 Contact Email: benniechatsystems@gmail.com
 Phone/WhatsApp: +234 810 181 1993
-------------------------------
+--------------------------------------------------
 Please review and advise on initial scoping, milestone breakdown, and formal proposal.`;
 
         if (previewEl) {
@@ -1077,61 +1076,4 @@ function initBackToTop() {
     btn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-}
-
-/* ==========================================================================
-   Stitch Mobile Bottom App Tab Navigation
-   ========================================================================== */
-function initMobileBottomNav() {
-    const tabs = document.querySelectorAll('.mobile-nav-tab');
-    if (!tabs.length) return;
-
-    const targetSections = [
-        { id: 'hero', tabTarget: 'hero' },
-        { id: 'capabilities', tabTarget: 'capabilities' },
-        { id: 'portfolio', tabTarget: 'portfolio' },
-        { id: 'procurement', tabTarget: 'procurement' }
-    ];
-
-    // Smooth scroll on tab click
-    tabs.forEach(tab => {
-        tab.addEventListener('click', (e) => {
-            const targetId = tab.getAttribute('data-target');
-            const targetEl = document.getElementById(targetId);
-            if (targetEl) {
-                e.preventDefault();
-                targetEl.scrollIntoView({ behavior: 'smooth' });
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-            }
-        });
-    });
-
-    // Update active tab on scroll
-    let isTicking = false;
-    window.addEventListener('scroll', () => {
-        if (!isTicking) {
-            window.requestAnimationFrame(() => {
-                const scrollPos = window.scrollY + 200;
-                let activeTarget = 'hero';
-
-                targetSections.forEach(item => {
-                    const el = document.getElementById(item.id);
-                    if (el && el.offsetTop <= scrollPos) {
-                        activeTarget = item.tabTarget;
-                    }
-                });
-
-                tabs.forEach(tab => {
-                    if (tab.getAttribute('data-target') === activeTarget) {
-                        tab.classList.add('active');
-                    } else {
-                        tab.classList.remove('active');
-                    }
-                });
-                isTicking = false;
-            });
-            isTicking = true;
-        }
-    }, { passive: true });
 }
